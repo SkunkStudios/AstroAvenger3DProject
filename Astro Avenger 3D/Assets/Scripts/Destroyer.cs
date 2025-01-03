@@ -123,8 +123,9 @@ public class Destroyer : MonoBehaviour
         {
             nextFire = Time.time;
             isFire = false;
-            for (int i = 0; i < weapon.discharges.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
+                weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
         }
@@ -192,8 +193,9 @@ public class Destroyer : MonoBehaviour
                 Instantiate(weapon.lazerBurst1, weapon.brustSpawn);
             }
 
-            for (int i = 0; i < weapon.discharges.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
+                weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
             for (int i = 0; i < weapon.lazers1[lazer1Upgrade].lazerSpawn.Length; i++)
@@ -215,8 +217,9 @@ public class Destroyer : MonoBehaviour
                 Instantiate(weapon.lazerBurst2, weapon.brustSpawn);
             }
 
-            for (int i = 0; i < weapon.discharges.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
+                weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
             for (int i = 0; i < weapon.lazers2[lazer2Upgrade].lazerSpawn.Length; i++)
@@ -229,8 +232,9 @@ public class Destroyer : MonoBehaviour
         }
         else if (lazers == Destroyer.Lazer.Lazer3 && Time.time > nextFire && energy < weapon.lazers3[lazer3Upgrade].gunLazers)
         {
-            for (int i = 0; i < weapon.discharges.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
+                weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
         }
@@ -238,8 +242,9 @@ public class Destroyer : MonoBehaviour
         {
             if (enemys.Length == 0)
             {
-                for (int i = 0; i < weapon.discharges.Length; i++)
+                for (int i = 0; i < 5; i++)
                 {
+                    weapon.dischargesPS[i].Stop();
                     weapon.discharges[i].enabled = false;
                 }
             }
@@ -254,6 +259,12 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Stop();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[1].enabled = false;
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
@@ -268,6 +279,12 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Stop();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[1].enabled = false;
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
@@ -282,6 +299,13 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
@@ -295,6 +319,12 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Stop();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[1].enabled = false;
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
@@ -309,6 +339,13 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
@@ -325,6 +362,14 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
                         weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Play();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
@@ -337,6 +382,12 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Stop();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[1].enabled = false;
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
@@ -351,6 +402,13 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
@@ -367,6 +425,14 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
                         weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Play();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
@@ -385,6 +451,15 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
                         weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
                         weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+                        weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Play();
+                        weapon.dischargesPS[3].Play();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
                     }
@@ -396,6 +471,12 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Stop();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[1].enabled = false;
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
@@ -410,6 +491,13 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Stop();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
@@ -426,6 +514,14 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
                         weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Play();
+                        weapon.dischargesPS[3].Stop();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
@@ -444,6 +540,15 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
                         weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
                         weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+                        weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Play();
+                        weapon.dischargesPS[3].Play();
+                        weapon.dischargesPS[4].Stop();
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
                     }
@@ -464,6 +569,16 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
                         weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
                         weapon.discharges[4].SetPosition(1, enemys[4].transform.position - transform.position);
+                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+                        weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
+                        weapon.dischargesPS[4].transform.position = enemys[4].transform.position;
+                        weapon.dischargesPS[0].Play();
+                        weapon.dischargesPS[1].Play();
+                        weapon.dischargesPS[2].Play();
+                        weapon.dischargesPS[3].Play();
+                        weapon.dischargesPS[4].Play();
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
                     }
                 }
@@ -475,8 +590,9 @@ public class Destroyer : MonoBehaviour
             nextFire = Time.time + 0.6f;
             energy -= weapon.lazers4[lazer4Upgrade].gunLazers;
 
-            for (int i = 0; i < weapon.discharges.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
+                weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
             for (int i = 0; i < weapon.lazers4[lazer4Upgrade].lazerSpawn.Length; i++)
@@ -496,8 +612,9 @@ public class Destroyer : MonoBehaviour
                 Instantiate(weapon.lazerBurst3, weapon.brustSpawn);
             }
 
-            for (int i = 0; i < weapon.discharges.Length; i++)
+            for (int i = 0; i < 5; i++)
             {
+                weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
             for (int i = 0; i < weapon.lazers5[lazer5Upgrade].lazerSpawn.Length; i++)

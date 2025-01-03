@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC LIT\\Documents\\Github Unity\\Astro Avenger 3D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E9C0FA0-883C-EE7F-6E50-21A655A143E9}|Assembly-CSharp.csproj|c:\\users\\pc lit\\documents\\github unity\\astro avenger 3d\\assets\\scripts\\destroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E9C0FA0-883C-EE7F-6E50-21A655A143E9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\destroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E9C0FA0-883C-EE7F-6E50-21A655A143E9}|Assembly-CSharp.csproj|c:\\users\\pc lit\\documents\\github unity\\astro avenger 3d\\assets\\scripts\\destroyerweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E9C0FA0-883C-EE7F-6E50-21A655A143E9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\destroyerweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DestroyerWeapon.cs",
+              "DocumentMoniker": "C:\\Users\\PC LIT\\Documents\\Github Unity\\Astro Avenger 3D\\Assets\\Scripts\\DestroyerWeapon.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DestroyerWeapon.cs",
+              "ToolTip": "C:\\Users\\PC LIT\\Documents\\Github Unity\\Astro Avenger 3D\\Assets\\Scripts\\DestroyerWeapon.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DestroyerWeapon.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T21:18:31.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Destroyer.cs",
+              "DocumentMoniker": "C:\\Users\\PC LIT\\Documents\\Github Unity\\Astro Avenger 3D\\Assets\\Scripts\\Destroyer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Destroyer.cs",
+              "ToolTip": "C:\\Users\\PC LIT\\Documents\\Github Unity\\Astro Avenger 3D\\Assets\\Scripts\\Destroyer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Destroyer.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAuwL0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T21:16:09.646Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
