@@ -1200,8 +1200,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.77494, y: 3.304861, z: 3.3048608}
-  m_Center: {x: 0, y: -2.5, z: 1.275}
+  m_Size: {x: 16, y: 3.304861, z: 3.3048608}
+  m_Center: {x: 0, y: -2.25, z: 2.25}
 --- !u!111 &111345710022674850
 Animation:
   m_ObjectHideFlags: 1
@@ -1268,6 +1268,7 @@ MonoBehaviour:
   pathTypes: 0
   startSpeed: 2.5
   speed: 2.5
+  tumble: 0
   offsetZ: -50
   targetAims: []
   weapons: []
@@ -1275,6 +1276,7 @@ MonoBehaviour:
   distBlast: 0
   distOut: 0
   astroLiner: {fileID: 0}
+  animation: {fileID: 0}
 --- !u!114 &114635831803595046
 MonoBehaviour:
   m_ObjectHideFlags: 1
