@@ -1226,6 +1226,7 @@ MonoBehaviour:
   distOut: 0
   astroLiner: {fileID: 0}
   animation: {fileID: 0}
+  mathfRot: 360
 --- !u!114 &114870561964498112
 MonoBehaviour:
   m_ObjectHideFlags: 1

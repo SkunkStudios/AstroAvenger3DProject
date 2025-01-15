@@ -265,3 +265,4 @@ MonoBehaviour:
   distOut: 0
   astroLiner: {fileID: 0}
   animation: {fileID: 0}
+  mathfRot: 360

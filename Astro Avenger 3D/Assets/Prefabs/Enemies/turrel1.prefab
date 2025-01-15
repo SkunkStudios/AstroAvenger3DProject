@@ -223,11 +223,12 @@ MonoBehaviour:
   targetAims: []
   weapons:
   - {fileID: 114209114551823086}
-  distIn: 35
+  distIn: 32.5
   distBlast: 30
   distOut: 0
   astroLiner: {fileID: 0}
   animation: {fileID: 0}
+  mathfRot: 45
 --- !u!114 &114510287447522356
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -20,6 +20,7 @@ public class EnemyPath : MonoBehaviour
     public float distOut;
     public AstroLiner astroLiner;
     public Animation animation;
+    public float mathfRot = 45;
 
     private Transform target;
     private Rigidbody rb;
@@ -228,8 +229,8 @@ public class EnemyPath : MonoBehaviour
                 if (enemyTypes == EnemyType.Path || enemyTypes == EnemyType.Chase || enemyTypes == EnemyType.Stop || enemyTypes == EnemyType.Turrel)
                 {
                     targetAim.rotation = Quaternion.RotateTowards(targetAim.rotation, lookRotation, Time.deltaTime * 75);
+                    targetAim.rotation = Quaternion.Euler(0, Mathf.Clamp(targetAim.eulerAngles.y, transform.eulerAngles.y - mathfRot, transform.eulerAngles.y + mathfRot), 0);
                 }
-                targetAim.rotation = Quaternion.Euler(0, Mathf.Clamp(targetAim.eulerAngles.y, transform.eulerAngles.y - 45, transform.eulerAngles.y + 45), 0);
             }
         }
         if (enemyTypes == EnemyType.Off && transform.position.z <= offsetZ || enemyTypes == EnemyType.StartChase && transform.position.z <= offsetZ || enemyTypes == EnemyType.StartTurrel && transform.position.z <= offsetZ || enemyTypes == EnemyType.Turrel && transform.position.z <= offsetZ || enemyTypes == EnemyType.StartShoot && transform.position.z <= offsetZ || enemyTypes == EnemyType.Shoot && transform.position.z <= offsetZ)
