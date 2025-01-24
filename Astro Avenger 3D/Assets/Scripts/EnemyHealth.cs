@@ -147,7 +147,7 @@ public class EnemyHealth : MonoBehaviour
             soundClip.PlayExplosion();
             Vector3 explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
-            yield return null;
+            yield return new WaitForSeconds(0.01f);
         }
         path.enemyTypes = EnemyPath.EnemyType.Death;
         ExploreDebris();
@@ -163,7 +163,7 @@ public class EnemyHealth : MonoBehaviour
             soundClip.PlayExplosion();
             Vector3 explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
-            yield return null;
+            yield return new WaitForSeconds(0.01f);
         }
         Destroy(gameObject);
     }

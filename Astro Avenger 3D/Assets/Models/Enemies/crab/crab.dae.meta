@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: e60fe070cde5b01458661a8803423989
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Crab
+    100002: //RootNode
+    100004: crab_cabine
+    100006: crab_L_engine
+    100008: crab_L_lazer
+    100010: crab_L_wing
+    100012: crab_R_engine
+    100014: crab_R_lazer
+    100016: crab_R_wing
+    100018: GunL
+    100020: GunR
+    400000: Crab
+    400002: //RootNode
+    400004: crab_cabine
+    400006: crab_L_engine
+    400008: crab_L_lazer
+    400010: crab_L_wing
+    400012: crab_R_engine
+    400014: crab_R_lazer
+    400016: crab_R_wing
+    400018: GunL
+    400020: GunR
+    2100000: Material
+    2100002: Material1
+    2300000: Crab
+    2300002: crab_cabine
+    2300004: crab_L_engine
+    2300006: crab_L_lazer
+    2300008: crab_L_wing
+    2300010: crab_R_engine
+    2300012: crab_R_lazer
+    2300014: crab_R_wing
+    2300016: GunL
+    2300018: GunR
+    3300000: Crab
+    3300002: crab_cabine
+    3300004: crab_L_engine
+    3300006: crab_L_lazer
+    3300008: crab_L_wing
+    3300010: crab_R_engine
+    3300012: crab_R_lazer
+    3300014: crab_R_wing
+    3300016: GunL
+    3300018: GunR
+    4300000: GunR
+    4300002: GunL
+    4300004: crab_R_wing
+    4300006: crab_R_lazer
+    4300008: crab_R_engine
+    4300010: crab_L_wing
+    4300012: crab_L_lazer
+    4300014: crab_L_engine
+    4300016: crab_cabine
+    4300018: Crab
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 573484ac4d1375f4bb3df28d00fcb457, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material1
+    second: {fileID: 2100000, guid: c1e7234f73e5c9e49bd4a03a920c587a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: c0a9c3db637e120479e70b35e25871c4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bonus_Life
+    100002: BonusEnergySmall1
+    100004: //RootNode
+    100006: BonusHealhSmall
+    100008: BonusLazer
+    100010: BonusMoney
+    100012: MedusaBonus
+    100014: NukeBonus
+    100016: Object01
+    100018: Object07
+    100020: SmartBonus
+    100022: sphere
+    100024: StraitBonus
+    100026: SwarmBonus
+    400000: Bonus_Life
+    400002: BonusEnergySmall1
+    400004: //RootNode
+    400006: BonusHealhSmall
+    400008: BonusLazer
+    400010: BonusMoney
+    400012: MedusaBonus
+    400014: NukeBonus
+    400016: Object01
+    400018: Object07
+    400020: SmartBonus
+    400022: sphere
+    400024: StraitBonus
+    400026: SwarmBonus
+    2100000: Material.002
+    2100002: Material.003
+    2100004: Material
+    2100006: Material.001
+    2100008: Material.005
+    2100010: Material.004
+    2300000: Bonus_Life
+    2300002: BonusEnergySmall1
+    2300004: BonusHealhSmall
+    2300006: BonusLazer
+    2300008: BonusMoney
+    2300010: MedusaBonus
+    2300012: NukeBonus
+    2300014: Object01
+    2300016: Object07
+    2300018: SmartBonus
+    2300020: sphere
+    2300022: StraitBonus
+    2300024: SwarmBonus
+    3300000: Bonus_Life
+    3300002: BonusEnergySmall1
+    3300004: BonusHealhSmall
+    3300006: BonusLazer
+    3300008: BonusMoney
+    3300010: MedusaBonus
+    3300012: NukeBonus
+    3300014: Object01
+    3300016: Object07
+    3300018: SmartBonus
+    3300020: sphere
+    3300022: StraitBonus
+    3300024: SwarmBonus
+    4300000: SwarmBonus
+    4300002: StraitBonus
+    4300004: SmartBonus
+    4300006: NukeBonus
+    4300008: MedusaBonus
+    4300010: BonusHealhSmall
+    4300012: BonusMoney
+    4300014: BonusLazer
+    4300016: Object07
+    4300018: Bonus_Life
+    4300020: sphere
+    4300022: Object01
+    4300024: BonusEnergySmall1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 0a7987ac3ee7efb4ca194e4c4644bbf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 860b06209a856d941915df80e2b34e27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: ede413cb39670114ab87c8b2c0b69fc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 892b84507ad009f42b54c238179351e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: d1b850c424ce5134fa1c87dceefa333f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: bd8b26c9c2272c54c9bb05c2d188021a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

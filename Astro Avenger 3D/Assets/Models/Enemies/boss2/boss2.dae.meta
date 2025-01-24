@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: e6f9245781880024b89478309f88c8ed
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: boss_2
+    100004: cabin_part
+    100006: cabin_part1
+    100008: cabin_part2
+    100010: cabine_part
+    100012: cabine_part3
+    100014: cabine_part4
+    100016: engine_left_part
+    100018: engine_left_part1
+    100020: engine_left_part2
+    100022: engine_right_part
+    100024: engine_right_part1
+    100026: engine_right_part2
+    100028: left_wing_part
+    100030: left_wing_part1
+    100032: left_wing_part2
+    100034: right_wing_part
+    100036: right_wing_part1
+    100038: right_wing_part2
+    400000: //RootNode
+    400002: boss_2
+    400004: cabin_part
+    400006: cabin_part1
+    400008: cabin_part2
+    400010: cabine_part
+    400012: cabine_part3
+    400014: cabine_part4
+    400016: engine_left_part
+    400018: engine_left_part1
+    400020: engine_left_part2
+    400022: engine_right_part
+    400024: engine_right_part1
+    400026: engine_right_part2
+    400028: left_wing_part
+    400030: left_wing_part1
+    400032: left_wing_part2
+    400034: right_wing_part
+    400036: right_wing_part1
+    400038: right_wing_part2
+    2100000: Material
+    2300000: boss_2
+    2300002: cabin_part
+    2300004: cabin_part1
+    2300006: cabin_part2
+    2300008: cabine_part
+    2300010: cabine_part3
+    2300012: cabine_part4
+    2300014: engine_left_part
+    2300016: engine_left_part1
+    2300018: engine_left_part2
+    2300020: engine_right_part
+    2300022: engine_right_part1
+    2300024: engine_right_part2
+    2300026: left_wing_part
+    2300028: left_wing_part1
+    2300030: left_wing_part2
+    2300032: right_wing_part
+    2300034: right_wing_part1
+    2300036: right_wing_part2
+    3300000: boss_2
+    3300002: cabin_part
+    3300004: cabin_part1
+    3300006: cabin_part2
+    3300008: cabine_part
+    3300010: cabine_part3
+    3300012: cabine_part4
+    3300014: engine_left_part
+    3300016: engine_left_part1
+    3300018: engine_left_part2
+    3300020: engine_right_part
+    3300022: engine_right_part1
+    3300024: engine_right_part2
+    3300026: left_wing_part
+    3300028: left_wing_part1
+    3300030: left_wing_part2
+    3300032: right_wing_part
+    3300034: right_wing_part1
+    3300036: right_wing_part2
+    4300000: right_wing_part2
+    4300002: right_wing_part1
+    4300004: right_wing_part
+    4300006: left_wing_part2
+    4300008: left_wing_part1
+    4300010: left_wing_part
+    4300012: engine_right_part2
+    4300014: engine_right_part1
+    4300016: engine_right_part
+    4300018: engine_left_part2
+    4300020: engine_left_part1
+    4300022: engine_left_part
+    4300024: cabine_part4
+    4300026: cabine_part3
+    4300028: cabine_part
+    4300030: cabin_part2
+    4300032: cabin_part1
+    4300034: cabin_part
+    4300036: boss_2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 9286f02781edf9c4bb3f785e1b1c64e9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

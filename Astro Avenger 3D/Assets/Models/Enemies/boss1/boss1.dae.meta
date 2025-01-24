@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 0bf66b91b8fc1ff4592038e1d6570175
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Body
+    100002: Body_part1
+    100004: Body_part2
+    100006: Body_part3
+    100008: Body_part4
+    100010: //RootNode
+    100012: Head
+    100014: Head_part1
+    100016: Head_part2
+    100018: Head_part3
+    100020: Head_part4
+    100022: L_Engine_part1
+    100024: L_Engine_part2
+    100026: LDownWing
+    100028: LDownWing_part
+    100030: LUpWing
+    100032: R_Engine_part3
+    100034: R_Engine_part4
+    100036: RDownWing
+    100038: RDownWing_part
+    100040: RUpWing
+    400000: Body
+    400002: Body_part1
+    400004: Body_part2
+    400006: Body_part3
+    400008: Body_part4
+    400010: //RootNode
+    400012: Head
+    400014: Head_part1
+    400016: Head_part2
+    400018: Head_part3
+    400020: Head_part4
+    400022: L_Engine_part1
+    400024: L_Engine_part2
+    400026: LDownWing
+    400028: LDownWing_part
+    400030: LUpWing
+    400032: R_Engine_part3
+    400034: R_Engine_part4
+    400036: RDownWing
+    400038: RDownWing_part
+    400040: RUpWing
+    2100000: Material
+    2300000: Body
+    2300002: Body_part1
+    2300004: Body_part2
+    2300006: Body_part3
+    2300008: Body_part4
+    2300010: Head
+    2300012: Head_part1
+    2300014: Head_part2
+    2300016: Head_part3
+    2300018: Head_part4
+    2300020: L_Engine_part1
+    2300022: L_Engine_part2
+    2300024: LDownWing
+    2300026: LDownWing_part
+    2300028: LUpWing
+    2300030: R_Engine_part3
+    2300032: R_Engine_part4
+    2300034: RDownWing
+    2300036: RDownWing_part
+    2300038: RUpWing
+    3300000: Body
+    3300002: Body_part1
+    3300004: Body_part2
+    3300006: Body_part3
+    3300008: Body_part4
+    3300010: Head
+    3300012: Head_part1
+    3300014: Head_part2
+    3300016: Head_part3
+    3300018: Head_part4
+    3300020: L_Engine_part1
+    3300022: L_Engine_part2
+    3300024: LDownWing
+    3300026: LDownWing_part
+    3300028: LUpWing
+    3300030: R_Engine_part3
+    3300032: R_Engine_part4
+    3300034: RDownWing
+    3300036: RDownWing_part
+    3300038: RUpWing
+    4300000: R_Engine_part4
+    4300002: R_Engine_part3
+    4300004: RUpWing
+    4300006: RDownWing_part
+    4300008: RDownWing
+    4300010: L_Engine_part2
+    4300012: L_Engine_part1
+    4300014: LUpWing
+    4300016: LDownWing_part
+    4300018: LDownWing
+    4300020: Head_part4
+    4300022: Head_part3
+    4300024: Head_part2
+    4300026: Head_part1
+    4300028: Head
+    4300030: Body_part4
+    4300032: Body_part3
+    4300034: Body_part2
+    4300036: Body_part1
+    4300038: Body
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 32045c5edf62449458a777246761026b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
