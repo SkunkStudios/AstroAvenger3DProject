@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPath: {fileID: 0}
-  laser: {fileID: 1978531092833284, guid: 8e66d7259a17e5643a1152af514e97af, type: 3}
+  laser: {fileID: 1540053631230072, guid: 2d8f169e5bd38e940b1df8ce9755698d, type: 3}
   burst: {fileID: 0}
   laserSpawns:
   - {fileID: 4371614769489886}
@@ -899,7 +899,7 @@ MonoBehaviour:
   maxRetime: 2
   maxLaserCount: 6
   isLaserRotate: 0
-  playName: destroyer_strait
+  playName: fighter_lazer
 --- !u!1 &1530324724453376
 GameObject:
   m_ObjectHideFlags: 0
