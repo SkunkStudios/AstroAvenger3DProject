@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AstroLiner : MonoBehaviour
@@ -10,7 +9,13 @@ public class AstroLiner : MonoBehaviour
     public GameObject termitPart;
     public GameObject[] enemySpawns = new GameObject[8];
 
+    private SoundClip soundClip;
     private int enemyCount;
+
+    void Awake()
+    {
+        soundClip = GameObject.FindObjectOfType<SoundClip>();
+    }
 
     public void WaitLauncher()
     {
@@ -56,40 +61,48 @@ public class AstroLiner : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         if (enemyCount == 0)
         {
-            Instantiate(explore, enemySpawns[0].transform.position, enemySpawns[0].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[0].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[0].transform.position, enemySpawns[0].transform.rotation);
             Destroy(enemySpawns[0]);
-            Instantiate(explore, enemySpawns[4].transform.position, enemySpawns[4].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[4].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[4].transform.position, enemySpawns[4].transform.rotation);
             Destroy(enemySpawns[4]);
         }
         yield return new WaitForSeconds(0.25f);
         if (enemyCount <= 1)
         {
-            Instantiate(explore, enemySpawns[1].transform.position, enemySpawns[1].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[1].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[1].transform.position, enemySpawns[1].transform.rotation);
             Destroy(enemySpawns[1]);
-            Instantiate(explore, enemySpawns[5].transform.position, enemySpawns[5].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[5].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[5].transform.position, enemySpawns[5].transform.rotation);
             Destroy(enemySpawns[5]);
         }
         yield return new WaitForSeconds(0.25f);
         if (enemyCount <= 2)
         {
-            Instantiate(explore, enemySpawns[2].transform.position, enemySpawns[2].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[2].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[2].transform.position, enemySpawns[2].transform.rotation);
             Destroy(enemySpawns[2]);
-            Instantiate(explore, enemySpawns[6].transform.position, enemySpawns[6].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[6].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[6].transform.position, enemySpawns[6].transform.rotation);
             Destroy(enemySpawns[6]);
         }
         yield return new WaitForSeconds(0.25f);
         if (enemyCount <= 3)
         {
-            Instantiate(explore, enemySpawns[3].transform.position, enemySpawns[3].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[3].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[3].transform.position, enemySpawns[3].transform.rotation);
             Destroy(enemySpawns[3]);
-            Instantiate(explore, enemySpawns[7].transform.position, enemySpawns[7].transform.rotation);
+            soundClip.PlayExplosion();
+            Instantiate(explore, enemySpawns[7].transform.position, Quaternion.identity);
             Instantiate(termitPart, enemySpawns[7].transform.position, enemySpawns[7].transform.rotation);
             Destroy(enemySpawns[7]);
         }

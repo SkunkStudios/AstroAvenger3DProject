@@ -972,19 +972,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts:
   - part: {fileID: 1647173140880728, guid: 0f49cfc7703da634ea3cf3c3148670dd, type: 3}
     partSpawns: {fileID: 4712114963440728}
-  maxHealth: 300000
+    enemyObjects: []
+  maxHealth: 600000
   isMeteorit: 0
   healthUI: {fileID: 1314466117011640}
   healthBar: {fileID: 114123134126087668}
   astroLiner: {fileID: 0}
   camHit: 3
+  scoreValue: 25000
+  countTime: 0
+  colliders:
+  - {fileID: 64359570144139616}
 --- !u!114 &114474273454326436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,6 +1007,7 @@ MonoBehaviour:
   pathTypes: 0
   startSpeed: 7.5
   speed: 7.5
+  tilt: 0
   tumble: 0
   offsetZ: -27.5
   targetAims: []
@@ -1012,7 +1019,10 @@ MonoBehaviour:
   distBlast: 20
   distOut: 10
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
 --- !u!1 &1552982011902622
 GameObject:

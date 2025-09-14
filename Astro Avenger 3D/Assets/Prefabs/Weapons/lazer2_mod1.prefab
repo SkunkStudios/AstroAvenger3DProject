@@ -104,10 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3488748a84f995444b857deb5bd78cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTypes: 1
   speed: 50
   slowSpeed: 50
   isHoming: 1
-  targetName: Destroyer
 --- !u!1 &1684555205815126
 GameObject:
   m_ObjectHideFlags: 0

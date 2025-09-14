@@ -548,7 +548,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35d9c1f16a60d1c4f960f6a105507ba0, type: 2}
+  - {fileID: 2100000, guid: 4528910b00056394187e9eaf61d0c4c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -763,7 +763,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3b8a3220620f68a459fd3efc828299ab, type: 2}
-  - {fileID: 2100000, guid: 35d9c1f16a60d1c4f960f6a105507ba0, type: 2}
+  - {fileID: 2100000, guid: 4528910b00056394187e9eaf61d0c4c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -980,8 +980,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16, y: 3.304861, z: 3.3048608}
-  m_Center: {x: 0, y: -2.25, z: 2.25}
+  m_Size: {x: 16, y: 1, z: 3.3048608}
+  m_Center: {x: 0, y: 0, z: 2.25}
 --- !u!111 &111345710022674850
 Animation:
   m_ObjectHideFlags: 0
@@ -1075,6 +1075,7 @@ MonoBehaviour:
   pathTypes: 0
   startSpeed: 2.5
   speed: 2.5
+  tilt: 0
   tumble: 0
   offsetZ: -50
   targetAims: []
@@ -1083,7 +1084,10 @@ MonoBehaviour:
   distBlast: 0
   distOut: 0
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
 --- !u!114 &114635831803595046
 MonoBehaviour:
@@ -1163,7 +1167,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35d9c1f16a60d1c4f960f6a105507ba0, type: 2}
+  - {fileID: 2100000, guid: 4528910b00056394187e9eaf61d0c4c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

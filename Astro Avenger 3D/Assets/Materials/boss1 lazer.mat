@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: boss1 lazer
   m_Shader: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
@@ -19,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 38b6ddf8a9b226a4a88f8b82704ce455, type: 3}
+        m_Texture: {fileID: 2800000, guid: f6a86977457ac9f4886aa84c960171a0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []

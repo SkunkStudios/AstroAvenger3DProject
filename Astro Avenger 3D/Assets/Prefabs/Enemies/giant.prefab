@@ -233,7 +233,7 @@ Transform:
   - {fileID: 4753558351056348}
   m_Father: {fileID: 4694867148038492}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9}
 --- !u!1 &1270128392176680
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ Transform:
   - {fileID: 4407196033024696}
   m_Father: {fileID: 4694867148038492}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9}
 --- !u!1 &1281981189129178
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,23 +483,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts:
   - part: {fileID: 1964024870965546, guid: 38872de313c66d947b24a77d0f7ab2e2, type: 3}
     partSpawns: {fileID: 4694867148038492}
+    enemyObjects: []
   - part: {fileID: 1766913102130106, guid: fb94b32221dda394ca5fc0809d4252c0, type: 3}
     partSpawns: {fileID: 4361952188598308}
+    enemyObjects: []
   - part: {fileID: 1870551053791894, guid: a4912f56b6a0e8642b99936f50c9a2ee, type: 3}
     partSpawns: {fileID: 4073896528958668}
-  maxHealth: 500
+    enemyObjects: []
+  maxHealth: 825
   isMeteorit: 0
   healthUI: {fileID: 0}
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 3
+  scoreValue: 550
+  countTime: 0
+  colliders:
+  - {fileID: 64383885589429074}
+  - {fileID: 64989751902922768}
+  - {fileID: 64880298183121256}
 --- !u!114 &114906641191658294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,10 +532,13 @@ MonoBehaviour:
   weapons:
   - {fileID: 114217639845375738}
   distIn: 20
-  distBlast: 10
-  distOut: 2.5
+  distBlast: 12.5
+  distOut: 5
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 111665451045544572}
+  openAnimation: {fileID: 7400000, guid: 43c32f4f154ffa442b4696ce7d4ae16d, type: 2}
+  closeAnimation: {fileID: 7400000, guid: 014f62419a0b5be4cbad40d49d0f8e8e, type: 2}
   mathfRot: 45
 --- !u!114 &114217639845375738
 MonoBehaviour:
@@ -575,9 +588,10 @@ Animation:
   m_GameObject: {fileID: 1292169426071722}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 43c32f4f154ffa442b4696ce7d4ae16d, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: 43c32f4f154ffa442b4696ce7d4ae16d, type: 2}
+  - {fileID: 7400000, guid: 014f62419a0b5be4cbad40d49d0f8e8e, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -1057,8 +1071,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 1.7, y: 0, z: 1.696}
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 1.7, y: 0, z: 2.196}
 --- !u!65 &65706253236924786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1070,8 +1084,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -1.7, y: 0, z: 1.696}
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: -1.7, y: 0, z: 2.196}
 --- !u!1 &1840733850451140
 GameObject:
   m_ObjectHideFlags: 0

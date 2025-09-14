@@ -56,9 +56,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313735048845110}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 1.798, y: 0.66, z: -2.24}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 0.4}
+  m_LocalScale: {x: 0.20000036, y: 0.6000005, z: 0.40000048}
   m_Children: []
   m_Father: {fileID: 4185125409716390}
   m_RootOrder: 3
@@ -150,9 +150,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657019379590490}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -1.798, y: 0.66, z: -2.24}
-  m_LocalScale: {x: 0.2, y: 0.6, z: 0.4}
+  m_LocalScale: {x: 0.20000036, y: 0.6000005, z: 0.40000048}
   m_Children: []
   m_Father: {fileID: 4185125409716390}
   m_RootOrder: 4
@@ -275,8 +275,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857341747357124}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4185125409716390}
@@ -424,19 +424,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts:
   - part: {fileID: 1330342007215726, guid: 5190ad05fed9ed243825a270d702c889, type: 3}
     partSpawns: {fileID: 4185125409716390}
-  maxHealth: 500
+    enemyObjects: []
+  maxHealth: 1050
   isMeteorit: 0
   healthUI: {fileID: 0}
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 3
+  scoreValue: 700
+  countTime: 0
+  colliders:
+  - {fileID: 64457770858644252}
 --- !u!114 &114340656876709314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,18 +457,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 4
   pathTypes: 0
+  enemyMover: {fileID: 0}
   startSpeed: 7.5
   speed: 7.5
+  tilt: 2
   tumble: 0
   offsetZ: -25
   targetAims: []
   weapons:
   - {fileID: 114209918355679006}
-  distIn: 15
+  distIn: 20
   distBlast: 12.5
   distOut: 5
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
 --- !u!114 &114209918355679006
 MonoBehaviour:

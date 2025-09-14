@@ -1,65 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1008154642123206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4805079670905304}
-  - component: {fileID: 114836705645757026}
-  m_Layer: 0
-  m_Name: Weapon2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4805079670905304
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008154642123206}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3500}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4276644927936976}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114836705645757026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008154642123206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f027f90a0a0738d44a103eba215f7980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPath: {fileID: 114798467803768550}
-  laser: {fileID: 1857868767489500, guid: c4fc48ce0ebd14e499954bbb229d8d4b, type: 3}
-  burst: {fileID: 0}
-  laserSpawns:
-  - {fileID: 4254525921478310}
-  - {fileID: 4639157795398950}
-  laserSpawnsL: []
-  laserSpawnsR: []
-  burstSpawns: []
-  burstSpawnsL: []
-  burstSpawnsR: []
-  startTime: 1
-  maxTime: 0
-  maxRetime: 0.5
-  maxLaserCount: 1
-  isLaserRotate: 0
-  playName: 
 --- !u!1 &1039480152663660
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,74 +585,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 4}
---- !u!1 &1529090198890946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4504465464433656}
-  - component: {fileID: 114978999216583938}
-  m_Layer: 0
-  m_Name: Weapon1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4504465464433656
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529090198890946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -475}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4276644927936976}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114978999216583938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529090198890946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f027f90a0a0738d44a103eba215f7980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPath: {fileID: 114798467803768550}
-  laser: {fileID: 1855051512635616, guid: 6d6a50f003ca7314ca4b7172ddd30f1b, type: 3}
-  burst: {fileID: 0}
-  laserSpawns:
-  - {fileID: 4629235032129994}
-  - {fileID: 4105690524987938}
-  - {fileID: 4848707225386178}
-  - {fileID: 4946307583427816}
-  - {fileID: 4310614516807116}
-  - {fileID: 4665700538995824}
-  - {fileID: 4429743416343760}
-  - {fileID: 4552817659440518}
-  laserSpawnsL: []
-  laserSpawnsR: []
-  burstSpawns:
-  - {fileID: 4629235032129994}
-  - {fileID: 4105690524987938}
-  burstSpawnsL: []
-  burstSpawnsR: []
-  startTime: 1
-  maxTime: 0
-  maxRetime: 0.5
-  maxLaserCount: 1
-  isLaserRotate: 0
-  playName: short_lazer
 --- !u!1 &1574776621525176
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +811,8 @@ GameObject:
   - component: {fileID: 54872820780522846}
   - component: {fileID: 114198188185236912}
   - component: {fileID: 114798467803768550}
+  - component: {fileID: 5135584090562061015}
+  - component: {fileID: 4143761042422967242}
   m_Layer: 0
   m_Name: shark
   m_TagString: Enemy
@@ -973,8 +847,6 @@ Transform:
   - {fileID: 4080165686146580}
   - {fileID: 4269523376340714}
   - {fileID: 4352366346319898}
-  - {fileID: 4504465464433656}
-  - {fileID: 4805079670905304}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1006,19 +878,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts:
   - part: {fileID: 1282117288416178, guid: b958b2e824dd0094d8d599f6ce15603e, type: 3}
     partSpawns: {fileID: 4276644927936976}
-  maxHealth: 30000
+    enemyObjects: []
+  maxHealth: 50000
   isMeteorit: 0
   healthUI: {fileID: 0}
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 3
+  scoreValue: 2500
+  countTime: 0
+  colliders:
+  - {fileID: 64998443280257498}
 --- !u!114 &114798467803768550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,18 +913,74 @@ MonoBehaviour:
   pathTypes: 0
   startSpeed: 1.25
   speed: 1.25
+  tilt: 0
   tumble: 0
   offsetZ: -30
   targetAims: []
   weapons:
-  - {fileID: 114978999216583938}
-  - {fileID: 114836705645757026}
+  - {fileID: 5135584090562061015}
   distIn: 60
   distBlast: 50
   distOut: 0
   astroLiner: {fileID: 0}
+  shark: {fileID: 4143761042422967242}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
+--- !u!114 &5135584090562061015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979588076962204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f027f90a0a0738d44a103eba215f7980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPath: {fileID: 114798467803768550}
+  laser: {fileID: 1855051512635616, guid: 6d6a50f003ca7314ca4b7172ddd30f1b, type: 3}
+  burst: {fileID: 0}
+  laserSpawns:
+  - {fileID: 4629235032129994}
+  - {fileID: 4105690524987938}
+  - {fileID: 4848707225386178}
+  - {fileID: 4946307583427816}
+  - {fileID: 4310614516807116}
+  - {fileID: 4665700538995824}
+  - {fileID: 4429743416343760}
+  - {fileID: 4552817659440518}
+  laserSpawnsL: []
+  laserSpawnsR: []
+  burstSpawns:
+  - {fileID: 4629235032129994}
+  - {fileID: 4105690524987938}
+  burstSpawnsL: []
+  burstSpawnsR: []
+  startTime: 1
+  maxTime: 0
+  maxRetime: 1
+  maxLaserCount: 1
+  isLaserRotate: 0
+  playName: short_lazer
+--- !u!114 &4143761042422967242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979588076962204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671065cb36244c2439cb5f30e8e3aa42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locust: {fileID: 1857868767489500, guid: c4fc48ce0ebd14e499954bbb229d8d4b, type: 3}
+  enemySpawns:
+  - {fileID: 4254525921478310}
+  - {fileID: 4639157795398950}
 --- !u!1 &1980901552591274
 GameObject:
   m_ObjectHideFlags: 0

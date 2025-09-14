@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraHit : MonoBehaviour
 {
     private Camera cam;
-	private float camHit;
 	private float viewHit;
 
 	// Use this for initialization
@@ -19,11 +18,15 @@ public class CameraHit : MonoBehaviour
     void Update ()
 	{
         cam.fieldOfView = viewHit - GameManager.zoomHit * Mathf.Sin(GameManager.zoomHit * 3) * 0.25f;
-        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, -GameManager.zoomHit * Mathf.Sin(GameManager.zoomHit * 3) * 0.25f);
+        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, -GameManager.zoomRotHit * Mathf.Sin(GameManager.zoomRotHit * 3) * 0.25f);
 	}
 
     public void Hit(float hit)
     {
         GameManager.zoomHit += hit;
+        if (hit == 3 || transform.eulerAngles.z != 0)
+        {
+            GameManager.zoomRotHit = GameManager.zoomHit;
+        }
     }
 }

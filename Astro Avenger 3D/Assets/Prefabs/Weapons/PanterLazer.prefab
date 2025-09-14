@@ -154,10 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3488748a84f995444b857deb5bd78cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTypes: 0
   speed: 25
   slowSpeed: 25
   isHoming: 0
-  targetName: 
 --- !u!114 &114643114506172188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   explore: {fileID: 1125741080904022, guid: fa543df1f9334cc4f9a7c2706a6509fa, type: 3}
   missile: {fileID: 0}
   missileSpawn: []
-  damage: 50
+  damage: 100
   maxHit: 1
   laserObject: {fileID: 23580988134947770}
   fireTail: {fileID: 0}

@@ -6,6 +6,8 @@ public class Atmosphere : MonoBehaviour
 {
     public bool isLook;
     public bool isSlide;
+    public bool isLookRot;
+    public float rot;
 
     private Transform cam;
 
@@ -29,7 +31,14 @@ public class Atmosphere : MonoBehaviour
         }
         else
         {
-            transform.rotation = Quaternion.Euler(50, 180, 180);
+            if (isLookRot)
+            {
+                transform.rotation = Quaternion.Euler(rot, -90, 270);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(50, 180, 180);
+            }
         }
     }
 }

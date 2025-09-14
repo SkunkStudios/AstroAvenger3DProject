@@ -36,6 +36,7 @@ public class DestroyerWeapon : MonoBehaviour
     public Lazer[] lazers4 = new Lazer[5];
     public Lazer[] lazers5 = new Lazer[5];
     public Rocket[] rockets = new Rocket[5];
+    public Light dischargeLight;
     public ParticleSystem[] dischargesPS;
     public LineRenderer[] discharges;
 }

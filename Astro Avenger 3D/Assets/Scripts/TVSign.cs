@@ -11,9 +11,13 @@ public class TVSign : MonoBehaviour
     private Texture2D[] screens;
     private int infoIndex;
 
+    void Awake()
+    {
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
     void Start ()
 	{
-        gameManager = GameObject.FindObjectOfType<GameManager>();
         screens = Resources.LoadAll<Texture2D>("TVScreen");
         ScreenUI();
     }

@@ -25,7 +25,7 @@ public class EnemyWeapon : MonoBehaviour
     private int laserCount;
     private bool isLaser;
 
-    void Start ()
+    void Awake()
 	{
         soundClip = GameObject.FindObjectOfType<SoundClip>();
     }

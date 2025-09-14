@@ -64,8 +64,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 0
   pathTypes: 0
-  startSpeed: 20
-  speed: 20
+  startSpeed: 15
+  speed: 15
+  tilt: 0
   tumble: 10
   offsetZ: -20
   targetAims: []
@@ -88,9 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts: []
   maxHealth: 100
@@ -99,6 +101,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 0
+  scoreValue: 75
+  countTime: 0
 --- !u!1 &1920773260327738
 GameObject:
   m_ObjectHideFlags: 0

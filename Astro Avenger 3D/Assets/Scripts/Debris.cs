@@ -18,8 +18,8 @@ public class Debris : MonoBehaviour
     private ParticleSystem fireTail;
     private Rigidbody rb;
 
-    void Start ()
-	{
+    void Awake()
+    {
         if (isChildren)
         {
             meshRenderers = GetComponentsInChildren<MeshRenderer>();
@@ -32,6 +32,10 @@ public class Debris : MonoBehaviour
         soundClip = GameObject.FindObjectOfType<SoundClip>();
         fireTail = GetComponent<ParticleSystem>();
         rb = GetComponent<Rigidbody>();
+    }
+
+    void Start ()
+	{
         rb.velocity = Random.insideUnitSphere * tumble;
         rb.angularVelocity = Random.insideUnitSphere * tumble;
         StartCoroutine(WaitExplore(waitTime));

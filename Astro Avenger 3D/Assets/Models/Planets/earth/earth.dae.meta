@@ -14,6 +14,7 @@ ModelImporter:
     2100000: Material.001
     2100002: Material
     2100004: Material.002
+    2100006: Material.003
     2300000: Earth
     2300002: Earth_atmosphere
     2300004: Earth_cloud
@@ -39,6 +40,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material.002
     second: {fileID: 2100000, guid: 54c1ae0dcb79c5e459aab4d2d542e366, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: bb6bbe6c5c8ef994b9608b3ee0fb0e56, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

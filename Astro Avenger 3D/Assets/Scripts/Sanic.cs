@@ -16,23 +16,29 @@ public class Sanic : MonoBehaviour
 
     void Update () 
 	{
-		transform.Rotate(Vector3.back * 1000 * Time.deltaTime);
+        Camera main = GameObject.Find("MLGCamera").GetComponent<Camera>();
+        float aspect = main.aspect * 10;
+        transform.Rotate(Vector3.back * 1000 * Time.deltaTime);
         transform.Translate(randomMove * Time.deltaTime, Space.World);
-        if (transform.position.x >= 13)
+        if (transform.position.x >= aspect)
         {
             randomMove.x = -randomMove.x;
+            transform.position = new Vector3(aspect, transform.position.y, -500);
         }
-        else if (transform.position.x <= -13)
+        else if (transform.position.x <= -aspect)
         {
             randomMove.x = -randomMove.x;
+            transform.position = new Vector3(-aspect, transform.position.y, -500);
         }
         else if (transform.position.y >= 10)
         {
             randomMove.y = -randomMove.y;
+            transform.position = new Vector3(transform.position.x, 10, -500);
         }
         else if (transform.position.y <= -10)
         {
             randomMove.y = -randomMove.y;
+            transform.position = new Vector3(transform.position.x, -10, -500);
         }
     }
 }

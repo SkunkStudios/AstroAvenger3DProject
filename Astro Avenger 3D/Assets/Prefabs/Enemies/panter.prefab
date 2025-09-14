@@ -160,21 +160,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts:
   - part: {fileID: 1285856165334498, guid: cf0f2fe212018b441aa9829d66a661c7, type: 3}
     partSpawns: {fileID: 4429818297954214}
+    enemyObjects: []
   - part: {fileID: 1971176327746392, guid: ad7c4ce5f3f88bd4d8d4fdfbbc08dda5, type: 3}
     partSpawns: {fileID: 4452884099028608}
-  maxHealth: 400
+    enemyObjects: []
+  maxHealth: 300
   isMeteorit: 0
   healthUI: {fileID: 0}
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 2
+  scoreValue: 200
+  countTime: 0
+  colliders:
+  - {fileID: 64691366010524994}
+  - {fileID: 64081824729798306}
 --- !u!114 &114766409009001458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 1
   pathTypes: 0
-  startSpeed: 7.5
+  startSpeed: 5
   speed: 7.5
   tumble: 0
   offsetZ: -25
@@ -198,10 +206,13 @@ MonoBehaviour:
   weapons:
   - {fileID: 114143303588768522}
   distIn: 20
-  distBlast: 10
-  distOut: 2.5
+  distBlast: 12.5
+  distOut: 5
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
 --- !u!114 &114143303588768522
 MonoBehaviour:

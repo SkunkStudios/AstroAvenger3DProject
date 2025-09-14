@@ -8,12 +8,16 @@ public class Parts
 {
     public GameObject part;
     public Transform partSpawns;
+    public MeshRenderer[] enemyObjects;
 }
 public class EnemyHealth : MonoBehaviour
 {
-	public GameObject explore;
+    public enum ExploreType { Off, WaitTime, Enterprise }
+    public ExploreType exploreTypes;
+
+    public GameObject explore;
+    public GameObject bigExplore;
     public Vector3 exploreValues;
-    public bool isExplore;
     public GameObject bonus;
     public Parts[] parts;
     public float maxHealth;
@@ -22,38 +26,54 @@ public class EnemyHealth : MonoBehaviour
     public Slider healthBar;
     public AstroLiner astroLiner;
     public float camHit;
+    public int scoreValue;
+    public int countTime;
+    public Collider[] colliders;
 
     private float health;
     private bool waitExplore;
     private bool isHealthBar;
+    private Game game;
     private GameManager gameManager;
     private CameraHit cameraHit;
     private SoundClip soundClip;
-    private Collider[] colliders;
     private MeshRenderer[] enemyObjects;
     private EnemyPath path;
 
-    void Start ()
-	{
-        health = maxHealth;
-        waitExplore = isExplore;
+    void Awake()
+    {
+        game = GameObject.FindObjectOfType<Game>();
         gameManager = GameObject.FindObjectOfType<GameManager>();
         cameraHit = GameObject.FindObjectOfType<CameraHit>();
         soundClip = GameObject.FindObjectOfType<SoundClip>();
         path = GetComponent<EnemyPath>();
-        colliders = GetComponentsInChildren<Collider>();
+    }
+
+    void Start ()
+	{
+        health = maxHealth;
+        if (exploreTypes == ExploreType.Off)
+        {
+            waitExplore = false;
+        }
+        else
+        {
+            waitExplore = true;
+        }
         if (transform.position.z > 30)
         {
             foreach (Collider collider in colliders)
             {
-                collider.enabled = false;
+                if (collider != null)
+                {
+                    collider.enabled = false;
+                }
             }
         }
     }
 
     void Update ()
 	{
-        colliders = GetComponentsInChildren<Collider>();
         enemyObjects = GetComponentsInChildren<MeshRenderer>();
         if (transform.position.z < 30 && health > 0)
         {
@@ -62,7 +82,11 @@ public class EnemyHealth : MonoBehaviour
                 collider.enabled = true;
             }
         }
-        if (transform.position.z <= 60 && healthUI != null && !isHealthBar)
+        if (GameObject.FindObjectOfType<Game>().gameOver && healthUI != null)
+        {
+            healthUI.SetActive(false);
+        }
+        if (transform.position.z <= 60 && healthUI != null && !isHealthBar && !GameObject.FindObjectOfType<Game>().gameOver)
         {
             healthUI.SetActive(true);
             isHealthBar = true;
@@ -81,10 +105,10 @@ public class EnemyHealth : MonoBehaviour
             }
             if (waitExplore)
             {
+                game.AddScore(scoreValue);
                 if (gameManager.isMemeSounds)
                 {
                     gameManager.MemeClipsUI();
-                    soundClip.PlayMemes();
                 }
                 if (healthUI != null)
                 {
@@ -94,16 +118,23 @@ public class EnemyHealth : MonoBehaviour
                 {
                     StartCoroutine(astroLiner.TermitExplores());
                 }
-                StartCoroutine(WaitExplore());
+                if (exploreTypes == ExploreType.WaitTime)
+                {
+                    StartCoroutine(WaitExplore());
+                }
+                if (exploreTypes == ExploreType.Enterprise)
+                {
+                    StartCoroutine(EnterpriseExplore());
+                }
                 waitExplore = false;
             }
-            else if(!isExplore)
+            if(exploreTypes == ExploreType.Off)
             {
+                game.AddScore(scoreValue);
                 cameraHit.Hit(camHit);
                 if (gameManager.isMemeSounds)
                 {
                     gameManager.MemeClipsUI();
-                    soundClip.PlayMemes();
                 }
                 if (isMeteorit)
                 {
@@ -142,29 +173,116 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator WaitExplore()
     {
-        for (int i = 0; i < 250; i++)
+        for (int i = 0; i < countTime; i++)
         {
             soundClip.PlayExplosion();
             Vector3 explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
         }
-        path.enemyTypes = EnemyPath.EnemyType.Death;
-        ExploreDebris();
-        foreach (MeshRenderer enemyObject in enemyObjects)
+        if (parts.Length <= 0)
         {
-            if (enemyObject != null)
+            foreach (MeshRenderer enemyObject in enemyObjects)
             {
-                enemyObject.enabled = false;
+                if (enemyObject != null)
+                {
+                    enemyObject.enabled = false;
+                }
             }
         }
-        for (int i = 0; i < 250; i++)
+        else if (parts.Length >= 1)
+        {
+            foreach (Parts part in parts)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    soundClip.PlayExplosion();
+                    Vector3 explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+                    Instantiate(explore, explorePoint, Quaternion.identity);
+                    yield return new WaitForSeconds(0.1f);
+                }
+                if (part != null)
+                {
+                    Instantiate(part.part, part.partSpawns.position, part.partSpawns.rotation);
+                }
+                foreach (MeshRenderer enemyObject in part.enemyObjects)
+                {
+                    if (enemyObject != null)
+                    {
+                        enemyObject.enabled = false;
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < countTime; i++)
         {
             soundClip.PlayExplosion();
             Vector3 explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
         }
+        Destroy(gameObject);
+    }
+
+    IEnumerator EnterpriseExplore()
+    {
+        Vector3 explorePoint;
+        for (int i = 0; i < 4; i++)
+        {
+            yield return new WaitForSeconds(1.5f);
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(explore, explorePoint, Quaternion.identity);
+        }
+        for (int i = 0; i < 6; i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(explore, explorePoint, Quaternion.identity);
+        }
+        for (int i = 0; i < 7; i++)
+        {
+            yield return new WaitForSeconds(0.4f);
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(explore, explorePoint, Quaternion.identity);
+        }
+        for (int i = 0; i < 8; i++)
+        {
+            yield return new WaitForSeconds(0.3f);
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(explore, explorePoint, Quaternion.identity);
+        }
+        for (int i = 0; i < 10; i++)
+        {
+            yield return new WaitForSeconds(0.2f);
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(explore, explorePoint, Quaternion.identity);
+        }
+        for (int i = 0; i < 40; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(explore, explorePoint, Quaternion.identity);
+        }
+        for (int i = 0; i < 50; i++)
+        {
+            cameraHit.Hit(3);
+            soundClip.PlayExplosion();
+            explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
+            Instantiate(bigExplore, explorePoint, Quaternion.identity);
+        }
+        soundClip.PlaySound("xplode");
         Destroy(gameObject);
     }
 }

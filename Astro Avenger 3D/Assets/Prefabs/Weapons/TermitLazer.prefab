@@ -62,7 +62,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.24
+  m_Radius: 0.16
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114263553373728670
 MonoBehaviour:
@@ -76,10 +76,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3488748a84f995444b857deb5bd78cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTypes: 0
   speed: 25
   slowSpeed: 25
   isHoming: 0
-  targetName: 
 --- !u!114 &114072084647758070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   explore: {fileID: 1125741080904022, guid: fa543df1f9334cc4f9a7c2706a6509fa, type: 3}
   missile: {fileID: 0}
   missileSpawn: []
-  damage: 50
+  damage: 100
   maxHit: 1
   laserObject: {fileID: 23334954850948434}
   fireTail: {fileID: 0}
@@ -135,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 1898794271868396}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4939279287741888}
   m_RootOrder: 0

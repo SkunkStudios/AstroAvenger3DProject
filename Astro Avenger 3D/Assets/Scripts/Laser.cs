@@ -12,10 +12,13 @@ public class Laser : MonoBehaviour
     public GameObject missile;
     public Transform[] missileSpawn;
     public int damage;
+    [HideInInspector]
+    public int damageHit;
     public int maxHit;
     public MeshRenderer laserObject;
     public MeshRenderer fireTail;
     public ParticleSystem laserPS;
+    public TrailRenderer laserTR;
     public float exploreTime;
     public string playName;
     public bool isBoom;
@@ -25,22 +28,28 @@ public class Laser : MonoBehaviour
     private GameManager gameManager;
     private CameraHit cameraHit;
     private SoundClip soundClip;
-    private int damageHit;
     private bool isHit = true;
     private bool isHitBoth = false;
 
-    void Start ()
-	{
+    void Awake()
+    {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         cameraHit = GameObject.FindObjectOfType<CameraHit>();
         soundClip = GameObject.FindObjectOfType<SoundClip>();
-        isHitBoth = isCanHit;
+    }
+
+    void Start ()
+	{
+        if (types == Type.Destroyer || types == Type.Enemy)
+        {
+            isHitBoth = true;
+        }
         StartCoroutine(WaitHit());
     }
 
     void Update ()
 	{
-		if (transform.position.z >= 25 || transform.position.z <= -25 || transform.position.x >= 40 || transform.position.x <= -40)
+		if (transform.position.z >= 24 && explore != null || transform.position.z <= -24 && explore != null || transform.position.x >= 40 && explore != null || transform.position.x <= -40 && explore != null)
 		{
             damageHit = maxHit;
             if (laserObject != null)
@@ -55,7 +64,14 @@ public class Laser : MonoBehaviour
             {
                 laserPS.Stop();
             }
-            Destroy(gameObject, 0.64f);
+            if (laserTR != null)
+            {
+                Destroy(gameObject, 0.64f);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
             isHit = false;
         }
         if (damageHit >= maxHit)
@@ -82,7 +98,7 @@ public class Laser : MonoBehaviour
         {
             if (gameManager.isMemeSounds)
             {
-                soundClip.PlayWTFBoom();
+                soundClip.PlayClip("wtfboom");
             }
             soundClip.PlayExplosion();
         }
@@ -94,16 +110,19 @@ public class Laser : MonoBehaviour
             }
             if (typeSounds == TypeSound.LazerHit)
             {
-                soundClip.PlayLazerHit();
+                soundClip.PlaySound("lazer_hit");
             }
             else if (typeSounds == TypeSound.RocetExplore)
             {
-                soundClip.PlayExplosionRocket();
+                soundClip.PlaySound("explosion_rocket");
             }
         }
         if (explore != null)
         {
-            transform.rotation = Quaternion.Euler(0, transform.rotation.y * -100, 0);
+            if (maxHit > 1)
+            {
+                transform.rotation = Quaternion.Euler(0, -transform.eulerAngles.y, 0);
+            }
             Instantiate(explore, transform.position, Quaternion.identity);
             damageHit++;
         }
@@ -121,14 +140,21 @@ public class Laser : MonoBehaviour
             {
                 laserPS.Stop();
             }
-            Destroy(gameObject, 0.64f);
+            if (laserTR != null)
+            {
+                Destroy(gameObject, 0.64f);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
             isHit = false;
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("EnemyCollider") && types == Type.Destroyer || other.CompareTag("Meteorit") && types == Type.Destroyer || other.CompareTag("AsteroidCollider") && types == Type.Destroyer || other.CompareTag("LightningCollider") && types == Type.Destroyer || other.CompareTag("DestroyerCollider") && types == Type.Enemy || other.CompareTag("Meteorit") && types == Type.Enemy || other.CompareTag("AsteroidCollider") && types == Type.Enemy || other.CompareTag("LightningCollider") && types == Type.Enemy || other.CompareTag("EnemyCollider") && isHitBoth && types == Type.Both || other.CompareTag("DestroyerCollider") && isHitBoth && types == Type.Both || other.CompareTag("Meteorit") && isHitBoth && types == Type.Both || other.CompareTag("AsteroidCollider") && isHitBoth && types == Type.Both || other.CompareTag("LightningCollider") && isHitBoth && types == Type.Both)
+        if (other.CompareTag("EnemyCollider") && types == Type.Destroyer || other.CompareTag("Meteorit") && types == Type.Destroyer || other.CompareTag("AsteroidCollider") && types == Type.Destroyer || other.CompareTag("LightningCollider") && types == Type.Destroyer || other.CompareTag("DestroyerCollider") && types == Type.Enemy || other.CompareTag("DestroyerImmortal") && types == Type.Enemy || other.CompareTag("Meteorit") && types == Type.Enemy || other.CompareTag("AsteroidCollider") && types == Type.Enemy || other.CompareTag("LightningCollider") && types == Type.Enemy || other.CompareTag("EnemyCollider") && isHitBoth && types == Type.Both || other.CompareTag("DestroyerCollider") && isHitBoth && types == Type.Both || other.CompareTag("DestroyerImmortal") && isHitBoth && types == Type.Both || other.CompareTag("Meteorit") && isHitBoth && types == Type.Both || other.CompareTag("AsteroidCollider") && isHitBoth && types == Type.Both || other.CompareTag("LightningCollider") && isHitBoth && types == Type.Both)
         {
             Hit();
         }
@@ -136,9 +162,17 @@ public class Laser : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("EnemyCollider") && isHitBoth && types == Type.Destroyer || other.CompareTag("Meteorit") && isHitBoth && types == Type.Destroyer || other.CompareTag("DestroyerCollider") && isHitBoth && types == Type.Enemy || other.CompareTag("Meteorit") && isHitBoth && types == Type.Enemy || other.CompareTag("DestroyerCollider") && isHitBoth && types == Type.Both || other.CompareTag("EnemyCollider") && isHitBoth && types == Type.Both || other.CompareTag("Meteorit") && isHitBoth && types == Type.Both)
+        if (other.CompareTag("EnemyCollider") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Destroyer || other.CompareTag("Meteorit") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Destroyer || other.CompareTag("DestroyerCollider") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Enemy || other.CompareTag("Meteorit") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Enemy || other.CompareTag("DestroyerCollider") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Both || other.CompareTag("EnemyCollider") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Both || other.CompareTag("Meteorit") && other.GetComponent<DamageCollider>() != null && isHitBoth && types == Type.Both)
         {
             other.GetComponent<DamageCollider>().Damage(damage);
+            if (!isCanHit)
+            {
+                isHitBoth = false;
+            }
+        }
+        else if (other.CompareTag("EnemyCollider") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Destroyer || other.CompareTag("Meteorit") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Destroyer || other.CompareTag("DestroyerCollider") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Enemy || other.CompareTag("Meteorit") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Enemy || other.CompareTag("DestroyerCollider") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Both || other.CompareTag("EnemyCollider") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Both || other.CompareTag("Meteorit") && other.GetComponent<EnemyHealth>() != null && isHitBoth && types == Type.Both)
+        {
+            other.GetComponent<EnemyHealth>().Damage(damage);
             if (!isCanHit)
             {
                 isHitBoth = false;
@@ -148,7 +182,10 @@ public class Laser : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        isHitBoth = true;
+        if (other.CompareTag("DestroyerCollider") || other.CompareTag("EnemyCollider"))
+        {
+            isHitBoth = true;
+        }
     }
 
     IEnumerator WaitHit()

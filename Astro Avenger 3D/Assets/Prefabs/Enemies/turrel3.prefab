@@ -65,17 +65,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28148976dcd8d4482353e27128b9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploreTypes: 0
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
+  bigExplore: {fileID: 0}
   exploreValues: {x: 0, y: 0, z: 0}
-  isExplore: 0
   bonus: {fileID: 0}
   parts: []
-  maxHealth: 1000
+  maxHealth: 750
   isMeteorit: 0
   healthUI: {fileID: 0}
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 0
+  scoreValue: 150
+  countTime: 0
+  colliders:
+  - {fileID: 3964184036843171622}
 --- !u!114 &114574471309051488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +108,10 @@ MonoBehaviour:
   distBlast: 50
   distOut: 0
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
 --- !u!114 &114786127194023044
 MonoBehaviour:
@@ -147,7 +155,7 @@ GameObject:
   - component: {fileID: 4107861381851446}
   - component: {fileID: 33744131253803254}
   - component: {fileID: 23334012680459718}
-  - component: {fileID: 64065484918602176}
+  - component: {fileID: 3964184036843171622}
   - component: {fileID: 114132879312723042}
   m_Layer: 0
   m_Name: Object01
@@ -215,8 +223,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64065484918602176
-MeshCollider:
+--- !u!65 &3964184036843171622
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -225,10 +233,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 8e04ad3769026f64587cd97400f837e4, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.9633, y: 2.6950006, z: 1}
+  m_Center: {x: 0.0052599907, y: 0.16975002, z: 0}
 --- !u!114 &114132879312723042
 MonoBehaviour:
   m_ObjectHideFlags: 0

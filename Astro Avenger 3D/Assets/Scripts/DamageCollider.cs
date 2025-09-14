@@ -9,18 +9,6 @@ public class DamageCollider : MonoBehaviour
     public EnemyPath enemyPath;
     public bool isHitEnemy;
 
-    // Use this for initialization
-    void Start ()
-	{
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("NukeCollider") && enemyHealth != null)
@@ -37,11 +25,14 @@ public class DamageCollider : MonoBehaviour
     {
         if (other.CompareTag("EnemyCollider") && destroyer != null || other.CompareTag("Meteorit") && destroyer != null || other.CompareTag("AsteroidCollider") && destroyer != null || other.CompareTag("LightningCollider") && destroyer != null)
         {
-            destroyer.Damage(50);
+            if (!destroyer.isImmortal)
+            {
+                destroyer.Damage(100);
+            }
         }
-        if (other.CompareTag("DestroyerCollider") && enemyHealth != null || other.CompareTag("EnemyCollider") && enemyHealth != null && isHitEnemy || other.CompareTag("Meteorit") && enemyHealth != null || other.CompareTag("AsteroidCollider") && enemyHealth != null && isHitEnemy || other.CompareTag("LightningCollider") && enemyHealth != null)
+        if (other.CompareTag("DestroyerCollider") && enemyHealth != null || other.CompareTag("DestroyerImmortal") && enemyHealth != null || other.CompareTag("EnemyCollider") && enemyHealth != null && isHitEnemy || other.CompareTag("Meteorit") && enemyHealth != null || other.CompareTag("AsteroidCollider") && enemyHealth != null && isHitEnemy || other.CompareTag("LightningCollider") && enemyHealth != null)
         {
-            enemyHealth.Damage(50);
+            enemyHealth.Damage(100);
         }
         else if (other.CompareTag("DestroyerLaser") && enemyPath != null)
         {
@@ -69,5 +60,40 @@ public class DamageCollider : MonoBehaviour
     public void RestoreEnergy()
     {
         destroyer.RestoreEnergy();
+    }
+
+    public void Immortal()
+    {
+        destroyer.Immortal();
+    }
+
+    public void LazerModificator()
+    {
+        destroyer.LazerModificator();
+    }
+
+    public void AddStrait()
+    {
+        destroyer.AddStrait();
+    }
+
+    public void AddSmart()
+    {
+        destroyer.AddSmart();
+    }
+
+    public void AddMedusa()
+    {
+        destroyer.AddMedusa();
+    }
+
+    public void AddSwarm()
+    {
+        destroyer.AddSwarm();
+    }
+
+    public void AddNuke()
+    {
+        destroyer.AddNuke();
     }
 }

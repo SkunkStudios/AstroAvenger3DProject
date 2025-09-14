@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-[Serializable]
-public class Boundary
-{
-    public float xMin, xMax, zMin, zMax;
-}
 
 public class Destroyer : MonoBehaviour
 {
@@ -19,12 +12,19 @@ public class Destroyer : MonoBehaviour
     public Rocket rockets;
     public float speed;
     public float tilt;
-    public Boundary boundary;
+    public Vector2 axis;
     public GameObject destroyerParts;
     public Transform destroyerMover;
     public GameObject explore;
-    public Slider healthBar;
-    public Slider energyBar;
+    public GameObject cabin;
+    public GameObject enginel;
+    public GameObject enginer;
+    public GameObject rocketl;
+    public GameObject rocketr;
+    public GameObject wingl;
+    public GameObject wingr;
+    public GameObject destroyerImmortal;
+    public GameObject immortalSphere;
 
     [Range(0, 4)]
     public int healthUpgrade;
@@ -48,23 +48,33 @@ public class Destroyer : MonoBehaviour
     public float[] maxHealth = new float[5];
     public float[] maxEnergy = new float[5];
     public DestroyerWeapon weapon;
-    public AudioSource healthAlert;
+    [HideInInspector]
+    public bool isImmortal;
 
     private float health;
     private float energy;
+    private float immortalTime = 3.0f;
+    private Game game;
     private GameManager gameManager;
     private SoundClip soundClip;
     private Rigidbody rb;
-    private float nextFire;
-    private bool isFire;
+    private float nextFireLazer;
+    private float nextFireRocket;
+    private bool isFireLazer;
+    private bool isFireRocket;
     private bool isAlert;
     private GameObject[] enemys;
 
-    void Start()
+    void Awake()
     {
+        game = GameObject.FindObjectOfType<Game>();
         gameManager = GameObject.FindObjectOfType<GameManager>();
         soundClip = GameObject.FindObjectOfType<SoundClip>();
         rb = GetComponent<Rigidbody>();
+    }
+
+    void Start()
+    {
         RestoreHealth();
         RestoreEnergy();
     }
@@ -79,65 +89,130 @@ public class Destroyer : MonoBehaviour
         {
             enemys = GameObject.FindGameObjectsWithTag("Enemy");
         }
-        healthBar.value = health;
-        healthBar.maxValue = maxHealth[healthUpgrade];
-        energyBar.value = energy;
-        energyBar.maxValue = maxEnergy[energyUpgrade];
-        if (health <= maxHealth[healthUpgrade] * 0.25f && !isAlert)
+        if (enemys.Length == 1)
         {
-            healthAlert.Play();
-            healthAlert.loop = true;
+            weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+            weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+        }
+        if (enemys.Length == 2)
+        {
+            weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+            weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+            weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+            weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+        }
+        if (enemys.Length == 3)
+        {
+            weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+            weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+            weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
+            weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+            weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+            weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+        }
+        if (enemys.Length == 4)
+        {
+            weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+            weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+            weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
+            weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
+            weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+            weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+            weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+            weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
+        }
+        if (enemys.Length >= 5)
+        {
+            weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
+            weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
+            weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
+            weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
+            weapon.discharges[4].SetPosition(1, enemys[4].transform.position - transform.position);
+            weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
+            weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
+            weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
+            weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
+            weapon.dischargesPS[4].transform.position = enemys[4].transform.position;
+        }
+        game.healthBar.value = health;
+        game.healthBar.maxValue = maxHealth[healthUpgrade];
+        game.energyBar.value = energy;
+        game.energyBar.maxValue = maxEnergy[energyUpgrade];
+        if (health <= maxHealth[healthUpgrade] * 0.25f && !isAlert && !game.shop)
+        {
+            soundClip.healthAlert.Play();
+            soundClip.healthAlert.loop = true;
             isAlert = true;
         }
-        if (health > maxHealth[healthUpgrade] * 0.25f && isAlert)
+        if (health > maxHealth[healthUpgrade] * 0.25f && isAlert && !game.shop)
         {
-            healthAlert.loop = false;
+            soundClip.healthAlert.loop = false;
             isAlert = false;
         }
         if (health <= 0)
         {
             Instantiate(explore, transform.position, Quaternion.identity);
+            soundClip.PlayClip("random wow/doh.swf");
             soundClip.PlayExplosion();
             Instantiate(destroyerParts, destroyerMover.position, Quaternion.identity);
+            game.DeadLives();
+            if (game.life <= 0)
+            {
+                soundClip.healthAlert.loop = false;
+                isAlert = false;
+                gameObject.SetActive(false);
+            }
             RestoreHealth();
             RestoreEnergy();
             rb.position = new Vector3(0.0f, 0.0f, -17);
+            immortalTime = 3;
         }
         if (energy < maxEnergy[energyUpgrade])
         {
-            energy += Time.deltaTime * 300;
+            energy += Time.deltaTime * 500;
         }
         else if (energy > maxEnergy[energyUpgrade])
         {
             energy = maxEnergy[energyUpgrade];
         }
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !game.shop)
         {
-            isFire = true;
+            isFireLazer = true;
             if (lazers == Destroyer.Lazer.Lazer3 && energy >= weapon.lazers3[lazer3Upgrade].gunLazers)
             {
+                weapon.dischargeLight.enabled = true;
                 soundClip.PlaySound("destroyer_lazer4");
             }
         }
-        else if (Input.GetButtonUp("Fire1"))
+        else if (Input.GetButtonUp("Fire1") && !game.shop)
         {
-            nextFire = Time.time;
-            isFire = false;
+            nextFireLazer = Time.time;
+            isFireLazer = false;
+            weapon.dischargeLight.enabled = false;
             for (int i = 0; i < 5; i++)
             {
                 weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
         }
-        if (isFire && Time.time > nextFire)
+        if (Input.GetButtonDown("Fire2") && !game.shop)
+        {
+            isFireRocket = true;
+        }
+        else if (Input.GetButtonUp("Fire2") && !game.shop)
+        {
+            nextFireRocket = Time.time;
+            isFireRocket = false;
+        }
+        if (isFireLazer && Time.time > nextFireLazer)
         {
             FireLazer();
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (isFireRocket && Time.time > nextFireRocket)
         {
             FireRocket();
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && !game.shop)
         {
             soundClip.PlaySound("rocketswitch");
             rockets++;
@@ -146,18 +221,47 @@ public class Destroyer : MonoBehaviour
                 rockets = Rocket.Rocket1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && !game.shop)
         {
             soundClip.PlaySound("laserswitch");
             lazers++;
-            if (lazers == Destroyer.Lazer.Lazer3 && isFire)
+            if (lazers == Destroyer.Lazer.Lazer3 && isFireLazer)
             {
+                weapon.dischargeLight.enabled = true;
                 soundClip.PlaySound("destroyer_lazer4");
             }
             if (lazers > Destroyer.Lazer.Lazer5)
             {
                 lazers = Lazer.Lazer1;
             }
+        }
+        if (immortalTime <= 0)
+        {
+            isImmortal = false;
+            cabin.SetActive(true);
+            enginel.SetActive(true);
+            enginer.SetActive(true);
+            rocketl.SetActive(true);
+            rocketr.SetActive(true);
+            wingl.SetActive(true);
+            wingr.SetActive(true);
+            destroyerImmortal.SetActive(false);
+            immortalSphere.SetActive(false);
+            destroyerImmortal.GetComponent<Renderer>().material.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            immortalTime -= Time.deltaTime;
+            isImmortal = true;
+            cabin.SetActive(false);
+            enginel.SetActive(false);
+            enginer.SetActive(false);
+            rocketl.SetActive(false);
+            rocketr.SetActive(false);
+            wingl.SetActive(false);
+            wingr.SetActive(false);
+            destroyerImmortal.SetActive(true);
+            destroyerImmortal.GetComponent<Renderer>().material.color = new Color(1, 1, 1, Mathf.PingPong(Time.time * 3, 1));
         }
     }
 
@@ -167,12 +271,15 @@ public class Destroyer : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        rb.velocity = movement * speed * Time.fixedDeltaTime;
+        if (!game.shop)
+        {
+            rb.velocity = movement * speed * Time.fixedDeltaTime;
+        }
 
         rb.position = new Vector3(
-                Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+                Mathf.Clamp(rb.position.x, -axis.x - rb.position.z / 5, axis.x + rb.position.z / 5),
                 0.0f,
-                Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax)
+                Mathf.Clamp(rb.position.z, -axis.y, axis.y)
         );
 
         destroyerMover.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
@@ -182,10 +289,10 @@ public class Destroyer : MonoBehaviour
     {
         GameObject b;
 
-        if (lazers == Destroyer.Lazer.Lazer1 && Time.time > nextFire && energy >= weapon.lazers1[lazer1Upgrade].gunLazers)
+        if (lazers == Destroyer.Lazer.Lazer1 && Time.time > nextFireLazer && energy >= weapon.lazers1[lazer1Upgrade].gunLazers)
         {
             soundClip.PlaySound("destroyer_lazer1");
-            nextFire = Time.time + 0.15f;
+            nextFireLazer = Time.time + 0.15f;
             energy -= weapon.lazers1[lazer1Upgrade].gunLazers;
 
             if (weapon.lazerBurst1 != null)
@@ -193,11 +300,13 @@ public class Destroyer : MonoBehaviour
                 Instantiate(weapon.lazerBurst1, weapon.brustSpawn);
             }
 
+            weapon.dischargeLight.enabled = false;
             for (int i = 0; i < 5; i++)
             {
                 weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
+
             for (int i = 0; i < weapon.lazers1[lazer1Upgrade].lazerSpawn.Length; i++)
             {
                 b = Instantiate(weapon.lazer1) as GameObject;
@@ -206,10 +315,10 @@ public class Destroyer : MonoBehaviour
                 b.GetComponent<Laser>().damage = weapon.lazers1[lazer1Upgrade].gunLazers;
             }
         }
-        else if (lazers == Destroyer.Lazer.Lazer2 && Time.time > nextFire && energy >= weapon.lazers2[lazer2Upgrade].gunLazers)
+        else if (lazers == Destroyer.Lazer.Lazer2 && Time.time > nextFireLazer && energy >= weapon.lazers2[lazer2Upgrade].gunLazers)
         {
             soundClip.PlaySound("destroyer_lazer3");
-            nextFire = Time.time + 0.15f;
+            nextFireLazer = Time.time + 0.15f;
             energy -= weapon.lazers2[lazer2Upgrade].gunLazers;
 
             if (weapon.lazerBurst2 != null)
@@ -217,11 +326,13 @@ public class Destroyer : MonoBehaviour
                 Instantiate(weapon.lazerBurst2, weapon.brustSpawn);
             }
 
+            weapon.dischargeLight.enabled = false;
             for (int i = 0; i < 5; i++)
             {
                 weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
+
             for (int i = 0; i < weapon.lazers2[lazer2Upgrade].lazerSpawn.Length; i++)
             {
                 b = Instantiate(weapon.lazer2) as GameObject;
@@ -230,16 +341,18 @@ public class Destroyer : MonoBehaviour
                 b.GetComponent<Laser>().damage = weapon.lazers2[lazer2Upgrade].gunLazers;
             }
         }
-        else if (lazers == Destroyer.Lazer.Lazer3 && Time.time > nextFire && energy < weapon.lazers3[lazer3Upgrade].gunLazers)
+        else if (lazers == Destroyer.Lazer.Lazer3 && Time.time > nextFireLazer && energy < weapon.lazers3[lazer3Upgrade].gunLazers * 0.1f)
         {
+            weapon.dischargeLight.enabled = false;
             for (int i = 0; i < 5; i++)
             {
                 weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
         }
-        else if (lazers == Destroyer.Lazer.Lazer3 && Time.time > nextFire && energy >= weapon.lazers3[lazer3Upgrade].gunLazers)
+        else if (lazers == Destroyer.Lazer.Lazer3 && Time.time > nextFireLazer && energy >= weapon.lazers3[lazer3Upgrade].gunLazers * 0.1f)
         {
+            weapon.dischargeLight.enabled = true;
             if (enemys.Length == 0)
             {
                 for (int i = 0; i < 5; i++)
@@ -250,17 +363,18 @@ public class Destroyer : MonoBehaviour
             }
             else if (enemys.Length >= 1)
             {
-                nextFire = Time.time + 0.01f;
-                energy -= weapon.lazers3[lazer3Upgrade].gunLazers;
+                nextFireLazer = Time.time + 0.05f;
+                energy -= weapon.lazers3[lazer3Upgrade].gunLazers * 0.1f;
                 if (lazer3Upgrade == 0)
                 {
                     if (enemys.Length >= 1)
                     {
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[0].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
                         weapon.dischargesPS[1].Stop();
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
@@ -278,9 +392,10 @@ public class Destroyer : MonoBehaviour
                     {
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[0].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
                         weapon.dischargesPS[1].Stop();
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
@@ -297,12 +412,14 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[1].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
@@ -318,9 +435,10 @@ public class Destroyer : MonoBehaviour
                     {
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[0].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
                         weapon.dischargesPS[1].Stop();
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
@@ -337,12 +455,14 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[1].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
@@ -359,15 +479,18 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[2].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
-                        weapon.dischargesPS[2].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
+                        if (!weapon.dischargesPS[2].isPlaying)
+                        {
+                            weapon.dischargesPS[2].Play();
+                        }
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
@@ -381,9 +504,10 @@ public class Destroyer : MonoBehaviour
                     {
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[0].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
                         weapon.dischargesPS[1].Stop();
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
@@ -400,12 +524,14 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[1].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
@@ -422,15 +548,18 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[2].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
-                        weapon.dischargesPS[2].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
+                        if (!weapon.dischargesPS[2].isPlaying)
+                        {
+                            weapon.dischargesPS[2].Play();
+                        }
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
@@ -447,18 +576,22 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[2].enabled = true;
                         weapon.discharges[3].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
-                        weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
-                        weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
-                        weapon.dischargesPS[2].Play();
-                        weapon.dischargesPS[3].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
+                        if (!weapon.dischargesPS[2].isPlaying)
+                        {
+                            weapon.dischargesPS[2].Play();
+                        }
+                        if (!weapon.dischargesPS[3].isPlaying)
+                        {
+                            weapon.dischargesPS[3].Play();
+                        }
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
@@ -470,9 +603,10 @@ public class Destroyer : MonoBehaviour
                     {
                         b = Instantiate(weapon.lazer3, enemys[0].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[0].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
                         weapon.dischargesPS[1].Stop();
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
@@ -489,12 +623,14 @@ public class Destroyer : MonoBehaviour
                         b = Instantiate(weapon.lazer3, enemys[1].transform.position, Quaternion.identity) as GameObject;
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
                         weapon.dischargesPS[2].Stop();
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
@@ -511,15 +647,18 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[0].enabled = true;
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[2].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
-                        weapon.dischargesPS[2].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
+                        if (!weapon.dischargesPS[2].isPlaying)
+                        {
+                            weapon.dischargesPS[2].Play();
+                        }
                         weapon.dischargesPS[3].Stop();
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
@@ -536,18 +675,22 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[1].enabled = true;
                         weapon.discharges[2].enabled = true;
                         weapon.discharges[3].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
-                        weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
-                        weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
-                        weapon.dischargesPS[2].Play();
-                        weapon.dischargesPS[3].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
+                        if (!weapon.dischargesPS[2].isPlaying)
+                        {
+                            weapon.dischargesPS[2].Play();
+                        }
+                        if (!weapon.dischargesPS[3].isPlaying)
+                        {
+                            weapon.dischargesPS[3].Play();
+                        }
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[4].enabled = false;
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
@@ -564,47 +707,54 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = true;
                         weapon.discharges[3].enabled = true;
                         weapon.discharges[4].enabled = true;
-                        weapon.discharges[0].SetPosition(1, enemys[0].transform.position - transform.position);
-                        weapon.discharges[1].SetPosition(1, enemys[1].transform.position - transform.position);
-                        weapon.discharges[2].SetPosition(1, enemys[2].transform.position - transform.position);
-                        weapon.discharges[3].SetPosition(1, enemys[3].transform.position - transform.position);
-                        weapon.discharges[4].SetPosition(1, enemys[4].transform.position - transform.position);
-                        weapon.dischargesPS[0].transform.position = enemys[0].transform.position;
-                        weapon.dischargesPS[1].transform.position = enemys[1].transform.position;
-                        weapon.dischargesPS[2].transform.position = enemys[2].transform.position;
-                        weapon.dischargesPS[3].transform.position = enemys[3].transform.position;
-                        weapon.dischargesPS[4].transform.position = enemys[4].transform.position;
-                        weapon.dischargesPS[0].Play();
-                        weapon.dischargesPS[1].Play();
-                        weapon.dischargesPS[2].Play();
-                        weapon.dischargesPS[3].Play();
-                        weapon.dischargesPS[4].Play();
+                        if (!weapon.dischargesPS[0].isPlaying)
+                        {
+                            weapon.dischargesPS[0].Play();
+                        }
+                        if (!weapon.dischargesPS[1].isPlaying)
+                        {
+                            weapon.dischargesPS[1].Play();
+                        }
+                        if (!weapon.dischargesPS[2].isPlaying)
+                        {
+                            weapon.dischargesPS[2].Play();
+                        }
+                        if (!weapon.dischargesPS[3].isPlaying)
+                        {
+                            weapon.dischargesPS[3].Play();
+                        }
+                        if (!weapon.dischargesPS[4].isPlaying)
+                        {
+                            weapon.dischargesPS[4].Play();
+                        }
                         b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
                     }
                 }
             }
         }
-        else if (lazers == Destroyer.Lazer.Lazer4 && Time.time > nextFire && energy >= weapon.lazers4[lazer4Upgrade].gunLazers)
+        else if (lazers == Destroyer.Lazer.Lazer4 && Time.time > nextFireLazer && energy >= weapon.lazers4[lazer4Upgrade].gunLazers)
         {
             soundClip.PlaySound("destroyer_lazer5");
-            nextFire = Time.time + 0.6f;
+            nextFireLazer = Time.time + 0.6f;
             energy -= weapon.lazers4[lazer4Upgrade].gunLazers;
 
+            weapon.dischargeLight.enabled = false;
             for (int i = 0; i < 5; i++)
             {
                 weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
+
             for (int i = 0; i < weapon.lazers4[lazer4Upgrade].lazerSpawn.Length; i++)
             {
                 b = Instantiate(weapon.lazer4, weapon.lazers4[lazer4Upgrade].lazerSpawn[i]) as GameObject;
                 b.GetComponent<Laser>().damage = weapon.lazers4[lazer4Upgrade].gunLazers;
             }
         }
-        else if (lazers == Destroyer.Lazer.Lazer5 && Time.time > nextFire && energy >= weapon.lazers5[lazer5Upgrade].gunLazers)
+        else if (lazers == Destroyer.Lazer.Lazer5 && Time.time > nextFireLazer && energy >= weapon.lazers5[lazer5Upgrade].gunLazers)
         {
             soundClip.PlaySound("destroyer_lazer2");
-            nextFire = Time.time + 0.15f;
+            nextFireLazer = Time.time + 0.15f;
             energy -= weapon.lazers5[lazer5Upgrade].gunLazers;
 
             if (weapon.lazerBurst3 != null)
@@ -612,11 +762,13 @@ public class Destroyer : MonoBehaviour
                 Instantiate(weapon.lazerBurst3, weapon.brustSpawn);
             }
 
+            weapon.dischargeLight.enabled = false;
             for (int i = 0; i < 5; i++)
             {
                 weapon.dischargesPS[i].Stop();
                 weapon.discharges[i].enabled = false;
             }
+
             for (int i = 0; i < weapon.lazers5[lazer5Upgrade].lazerSpawn.Length; i++)
             {
                 b = Instantiate(weapon.lazer5) as GameObject;
@@ -629,10 +781,11 @@ public class Destroyer : MonoBehaviour
 
     public void FireRocket()
     {
+        nextFireRocket = Time.time + 2f;
         if (weapon.rockets[(int)rockets].isWTFBoom && gameManager.isMemeSounds)
         {
-            soundClip.PlaySound("wtfstart");
-            soundClip.PlaySound("fire-in-the-hole");
+            soundClip.PlayClip("fire-in-the-hole");
+            soundClip.PlayClip("wtfstart");
         }
         soundClip.PlaySound(weapon.rockets[(int)rockets].playRocket);
 
@@ -655,5 +808,60 @@ public class Destroyer : MonoBehaviour
     public void RestoreEnergy()
     {
         energy = maxEnergy[energyUpgrade];
+    }
+
+    public void Immortal()
+    {
+        immortalTime = 90;
+        immortalSphere.SetActive(true);
+    }
+
+    public void LazerModificator()
+    {
+        if (lazers == Destroyer.Lazer.Lazer1 && lazer1Upgrade < 4)
+        {
+            lazer1Upgrade++;
+        }
+        else if (lazers == Destroyer.Lazer.Lazer2 && lazer2Upgrade < 4)
+        {
+            lazer2Upgrade++;
+        }
+        else if (lazers == Destroyer.Lazer.Lazer3 && lazer3Upgrade < 4)
+        {
+            lazer3Upgrade++;
+        }
+        else if (lazers == Destroyer.Lazer.Lazer4 && lazer4Upgrade < 4)
+        {
+            lazer4Upgrade++;
+        }
+        else if (lazers == Destroyer.Lazer.Lazer5 && lazer5Upgrade < 4)
+        {
+            lazer5Upgrade++;
+        }
+    }
+
+    public void AddStrait()
+    {
+        rocket1Count += 10;
+    }
+
+    public void AddSmart()
+    {
+        rocket2Count += 5;
+    }
+
+    public void AddMedusa()
+    {
+        rocket3Count += 3;
+    }
+
+    public void AddSwarm()
+    {
+        rocket4Count += 3;
+    }
+
+    public void AddNuke()
+    {
+        rocket5Count += 1;
     }
 }
