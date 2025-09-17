@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Orbit : MonoBehaviour
 {
-	public Transform target;
-	public float speed;
 	public Vector3 axis;
 	public bool isAxisX;
+	public bool isOrbit;
 
     void Update ()
 	{
-        if (target == null)
+        if (isOrbit)
+		{
+            transform.Rotate(axis * Time.deltaTime);
+        }
+        else
 		{
             if (isAxisX)
             {
@@ -21,10 +24,6 @@ public class Orbit : MonoBehaviour
             {
                 transform.Rotate(-Vector3.forward * Time.deltaTime * 3);
             }
-        }
-        else
-		{
-            transform.RotateAround(target.transform.position, axis, speed * Time.deltaTime);
         }
     }
 }

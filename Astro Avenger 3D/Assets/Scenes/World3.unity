@@ -122,7 +122,8 @@ Transform:
   m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1767585287}
   m_Father: {fileID: 21596338}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -139,7 +140,6 @@ Transform:
   m_Children:
   - {fileID: 21596336}
   - {fileID: 21596340}
-  - {fileID: 1767585287}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
@@ -239,10 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
+  isOrbit: 0
 --- !u!23 &23890512
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1023,10 +1022,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
+  isOrbit: 0
 --- !u!23 &1101929852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6021,14 +6019,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767680551}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.00000003774895, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 25, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1767585285}
   - {fileID: 1767585281}
-  m_Father: {fileID: 21596338}
-  m_RootOrder: 2
+  m_Father: {fileID: 21596336}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -25, y: 0, z: 180}
 --- !u!1 &1767680545
 GameObject:
@@ -6077,7 +6075,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767585287}
-  - component: {fileID: 1767713929}
   m_Layer: 8
   m_Name: satellitemoonsmall2
   m_TagString: Untagged
@@ -6085,22 +6082,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1767713929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767680551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 21596336}
-  speed: 2
-  axis: {x: 0, y: -2, z: 0}
-  isAxisX: 0
 --- !u!114 &1767713930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6129,10 +6110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
+  isOrbit: 0
 --- !u!33 &1768912421
 MeshFilter:
   m_ObjectHideFlags: 0

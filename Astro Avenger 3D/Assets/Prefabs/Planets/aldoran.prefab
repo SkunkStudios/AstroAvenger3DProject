@@ -26,13 +26,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537700980418512}
-  m_LocalRotation: {x: 0, y: 0.27982908, z: 0.96004987, w: 0}
+  m_LocalRotation: {x: 0, y: 0.258819, z: 0.9659259, w: 0}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7478537702761339602}
+  - {fileID: 7478537701071158602}
   m_Father: {fileID: 7478537700980194290}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -32.5, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: -30, y: 0, z: 180}
 --- !u!33 &7478537700983585744
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90,10 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
+  isOrbit: 0
 --- !u!1 &7478537700980418514
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,8 +125,6 @@ Transform:
   m_Children:
   - {fileID: 7478537700980194288}
   - {fileID: 7478537700980194292}
-  - {fileID: 7478537702761339602}
-  - {fileID: 7478537701071158602}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -262,13 +261,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537701070856552}
-  m_LocalRotation: {x: 0, y: 0.27982908, z: 0.96004987, w: 0}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 7478537701071158602}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -32.5, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7478537701067734376
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -326,10 +325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
+  isOrbit: 0
 --- !u!1 &7478537701070856554
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,14 +352,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537701070856554}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7478537701071158600}
   - {fileID: 7478537701071158604}
-  m_Father: {fileID: 7478537700980194290}
-  m_RootOrder: 3
+  m_Father: {fileID: 7478537700980194288}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5481391521939708849
 MonoBehaviour:
@@ -375,10 +373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7478537700980194288}
-  speed: 60
-  axis: {x: -0.25, y: 0, z: 1}
+  axis: {x: 0, y: -60, z: 0}
   isAxisX: 0
+  isOrbit: 1
 --- !u!1 &7478537701070856556
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +402,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537701070856556}
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 7478537701071158602}
   m_RootOrder: 1
@@ -499,13 +496,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537702761236208}
-  m_LocalRotation: {x: 0, y: 0.27982908, z: 0.96004987, w: 0}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -25, z: 0}
+  m_LocalScale: {x: 0.325, y: 0.325, z: 0.325}
   m_Children: []
   m_Father: {fileID: 7478537702761339602}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -32.5, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7478537702757948144
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -563,10 +560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
+  isOrbit: 0
 --- !u!1 &7478537702761236210
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,14 +587,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537702761236210}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -25, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7478537702761339600}
   - {fileID: 7478537702761339604}
-  m_Father: {fileID: 7478537700980194290}
-  m_RootOrder: 2
+  m_Father: {fileID: 7478537700980194288}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5481391522790087320
 MonoBehaviour:
@@ -612,10 +608,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7478537700980194288}
-  speed: 60
-  axis: {x: 1, y: 0, z: 0.5}
+  axis: {x: 0, y: 0, z: 60}
   isAxisX: 0
+  isOrbit: 1
 --- !u!1 &7478537702761236212
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,8 +638,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7478537702761236212}
   m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0, y: -25, z: 0}
+  m_LocalScale: {x: 0.325, y: 0.325, z: 0.325}
   m_Children: []
   m_Father: {fileID: 7478537702761339602}
   m_RootOrder: 1
