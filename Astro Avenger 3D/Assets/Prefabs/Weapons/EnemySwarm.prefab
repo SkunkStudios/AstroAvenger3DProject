@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8699436695081602560}
   m_Layer: 0
   m_Name: EnemySwarm
-  m_TagString: DestroyerLaser
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   missile: {fileID: 0}
   missileSpawn: []
   damage: 250
+  damageHit: 0
   maxHit: 1
   laserObject: {fileID: 23721982755158930}
   fireTail: {fileID: 0}

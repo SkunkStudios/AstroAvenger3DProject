@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class Parts
@@ -23,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth;
     public bool isMeteorit;
     public GameObject healthUI;
-    public Slider healthBar;
+    public HealthBar healthBar;
     public AstroLiner astroLiner;
     public float camHit;
     public int scoreValue;
@@ -32,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
 
     private float health;
     private bool waitExplore;
-    private bool isHealthBar;
     private Game game;
     private GameManager gameManager;
     private CameraHit cameraHit;
@@ -86,15 +83,11 @@ public class EnemyHealth : MonoBehaviour
         {
             healthUI.SetActive(false);
         }
-        if (transform.position.z <= 60 && healthUI != null && !isHealthBar && !GameObject.FindObjectOfType<Game>().gameOver)
-        {
-            healthUI.SetActive(true);
-            isHealthBar = true;
-        }
         if (healthBar != null)
         {
-            healthBar.value = health;
-            healthBar.maxValue = maxHealth;
+            healthBar.slider.value = health;
+            healthBar.slider.maxValue = maxHealth;
+            healthBar.fill.color = healthBar.gradient.Evaluate(healthBar.slider.normalizedValue);
         }
         if (health <= 0)
         {

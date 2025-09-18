@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    public GameObject[] levelLand = new GameObject[5];
     public Rank[] ranks = new Rank[20];
     public int score = 0;
     public int money = 0;
@@ -29,7 +30,10 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (GameObject.FindObjectOfType<GameManager>().mode == GameManager.Mode.Survival)
+        {
+            Instantiate(levelLand[Random.Range(0, levelLand.Length)], Vector3.zero, Quaternion.identity);
+        }
     }
 
     // Update is called once per frame

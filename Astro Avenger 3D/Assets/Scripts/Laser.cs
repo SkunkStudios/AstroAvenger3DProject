@@ -182,7 +182,7 @@ public class Laser : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("DestroyerCollider") || other.CompareTag("EnemyCollider"))
+        if (other.CompareTag("DestroyerCollider") || other.CompareTag("EnemyCollider") || other.CompareTag("EnemyTrigger"))
         {
             isHitBoth = true;
         }
