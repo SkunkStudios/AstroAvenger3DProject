@@ -18299,7 +18299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedX: 0
-  speedY: -0.25
+  speedY: -0.2
 --- !u!1 &701229130
 GameObject:
   m_ObjectHideFlags: 0
@@ -19459,7 +19459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 2, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: 0}
   isAxisX: 1
   isOrbit: 0
 --- !u!1 &907345922
@@ -28842,7 +28842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedX: 0
-  speedY: -0.125
+  speedY: -0.1
 --- !u!1 &1863284349
 GameObject:
   m_ObjectHideFlags: 0

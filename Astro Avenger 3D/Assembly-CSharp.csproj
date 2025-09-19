@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\Explosion.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\LandPlanets.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />
@@ -78,7 +79,6 @@
      <Compile Include="Assets\Scripts\PlanetMove.cs" />
      <Compile Include="Assets\Scripts\Platforms.cs" />
      <Compile Include="Assets\Scripts\Rank.cs" />
-     <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Sanic.cs" />
      <Compile Include="Assets\Scripts\Shark.cs" />
      <Compile Include="Assets\Scripts\SoundClip.cs" />

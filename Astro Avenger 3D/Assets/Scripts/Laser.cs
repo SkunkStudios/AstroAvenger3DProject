@@ -126,7 +126,7 @@ public class Laser : MonoBehaviour
             Instantiate(explore, transform.position, Quaternion.identity);
             damageHit++;
         }
-        if (damageHit >= maxHit || transform.rotation.y == 0)
+        if (damageHit >= maxHit && !isCanHit || transform.rotation.y == 0 && !isCanHit)
         {
             if (laserObject != null)
             {
@@ -182,7 +182,7 @@ public class Laser : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("DestroyerCollider") || other.CompareTag("EnemyCollider") || other.CompareTag("EnemyTrigger"))
+        if (other.CompareTag("DestroyerCollider") || other.CompareTag("EnemyCollider") || other.CompareTag("EnemyTrigger") || other.tag != "EnemyLaser")
         {
             isHitBoth = true;
         }

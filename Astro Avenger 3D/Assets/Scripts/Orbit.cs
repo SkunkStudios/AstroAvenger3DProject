@@ -18,7 +18,7 @@ public class Orbit : MonoBehaviour
 		{
             if (isAxisX)
             {
-                transform.Rotate(Vector3.right * Time.deltaTime * 5);
+                transform.Rotate(Vector3.right * Time.deltaTime * 2);
             }
             else
             {

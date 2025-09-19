@@ -666,9 +666,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: -150, z: 150}
+    m_Position: {x: 0, y: -150, z: 250}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 250, y: 250, z: 250}
+    m_Scale: {x: 250, y: 250, z: 500}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -866,7 +866,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 250
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4725,7 +4725,7 @@ MonoBehaviour:
     planetRot: {x: 0, y: 4, z: 0}
   - planet: {fileID: 3009098998161870478, guid: 3854bda0fef63eb45843aa8826d91088,
       type: 3}
-    planetPos: {x: -10, y: -150, z: 4625}
+    planetPos: {x: -10, y: -155, z: 4650}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 2865407658744200284, guid: 1658f9a8177af744eb921d8d1cd04b9f,
       type: 3}
