@@ -178,7 +178,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 3fb5b7925b7e00940b7106300f716d2b, type: 3}
   - {fileID: 2800000, guid: 79ff33969f190be41b48fe4552b324d3, type: 3}
   isLoop: 0
-  maxTime: 0.032
+  maxTime: 0.0325
 --- !u!82 &82973730324756564
 AudioSource:
   m_ObjectHideFlags: 0
