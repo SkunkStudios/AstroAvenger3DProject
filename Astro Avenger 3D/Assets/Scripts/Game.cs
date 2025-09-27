@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    public GameObject[] levelLand = new GameObject[5];
+    public GameObject[] levelLand = new GameObject[10];
     public Rank[] ranks = new Rank[20];
     public int score = 0;
     public int money = 0;
