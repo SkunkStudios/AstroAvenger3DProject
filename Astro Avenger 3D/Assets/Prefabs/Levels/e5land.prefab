@@ -601,7 +601,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 100000
+    maxNumParticles: 5000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4721,7 +4721,7 @@ MonoBehaviour:
     planetPos: {x: 45, y: -155, z: 275}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 672889048672921140, guid: a3348689b5729cb418a97566d84470d4, type: 3}
-    planetPos: {x: 45, y: -50, z: 600}
+    planetPos: {x: 238.75, y: -50, z: 1975}
     planetRot: {x: 0, y: 4, z: 0}
   - planet: {fileID: 3009098998161870478, guid: 3854bda0fef63eb45843aa8826d91088,
       type: 3}
