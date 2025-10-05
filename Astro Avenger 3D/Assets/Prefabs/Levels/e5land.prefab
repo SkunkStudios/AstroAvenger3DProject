@@ -4714,15 +4714,15 @@ MonoBehaviour:
   planets:
   - planet: {fileID: 4602612671682323974, guid: 497724c0d1e4703409723eec232dc3fc,
       type: 3}
-    planetPos: {x: 10, y: -75, z: 80}
+    planetPos: {x: 10, y: -82.5, z: 95}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 3749186504173985957, guid: 950875393287a9f4686b249c5ec6d772,
       type: 3}
-    planetPos: {x: 45, y: -155, z: 275}
+    planetPos: {x: 45, y: -152.5, z: 272.5}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 672889048672921140, guid: a3348689b5729cb418a97566d84470d4, type: 3}
-    planetPos: {x: 238.75, y: -50, z: 1975}
-    planetRot: {x: 0, y: 4, z: 0}
+    planetPos: {x: 221.75, y: -50, z: 1650}
+    planetRot: {x: 0, y: 4.5, z: 0}
   - planet: {fileID: 3009098998161870478, guid: 3854bda0fef63eb45843aa8826d91088,
       type: 3}
     planetPos: {x: -10, y: -155, z: 4660}
@@ -4809,15 +4809,15 @@ MonoBehaviour:
     planetRot: {x: 180, y: -45, z: 0}
   - planet: {fileID: 2865407658744200284, guid: 1658f9a8177af744eb921d8d1cd04b9f,
       type: 3}
-    planetPos: {x: 25, y: -40, z: 17725}
+    planetPos: {x: 25, y: -40, z: 17925}
     planetRot: {x: 180, y: 15, z: 0}
   - planet: {fileID: 2865407658744200284, guid: 1658f9a8177af744eb921d8d1cd04b9f,
       type: 3}
-    planetPos: {x: -10, y: -40, z: 17850}
+    planetPos: {x: -10, y: -40, z: 18050}
     planetRot: {x: 180, y: -165, z: 0}
   - planet: {fileID: 2865407658744200284, guid: 1658f9a8177af744eb921d8d1cd04b9f,
       type: 3}
-    planetPos: {x: -25, y: -40, z: 17900}
+    planetPos: {x: -25, y: -40, z: 18100}
     planetRot: {x: 180, y: -150, z: 0}
   - planet: {fileID: 9067903500196399900, guid: 21b16c977857a6e4ba30f1c527ad3dea,
       type: 3}
@@ -4885,9 +4885,9 @@ MonoBehaviour:
     planetRot: {x: 180, y: 75, z: 0}
   - planet: {fileID: 9067903500196399900, guid: 21b16c977857a6e4ba30f1c527ad3dea,
       type: 3}
-    planetPos: {x: -15, y: -55, z: 19700}
+    planetPos: {x: -15, y: -55, z: 19920}
     planetRot: {x: 180, y: 75, z: 0}
   - planet: {fileID: 9067903500196399900, guid: 21b16c977857a6e4ba30f1c527ad3dea,
       type: 3}
-    planetPos: {x: -45, y: -55, z: 19775}
+    planetPos: {x: -45, y: -55, z: 20000}
     planetRot: {x: 180, y: -105, z: 0}

@@ -4722,7 +4722,7 @@ MonoBehaviour:
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 4602612671682323974, guid: 497724c0d1e4703409723eec232dc3fc,
       type: 3}
-    planetPos: {x: -2, y: -175, z: 355}
+    planetPos: {x: -2, y: -180, z: 383.75}
     planetRot: {x: 0, y: -0.5, z: 0}
   - planet: {fileID: 6421647847368063960, guid: 34812675d64f7a2419a50d7437c3c807,
       type: 3}
@@ -4738,15 +4738,15 @@ MonoBehaviour:
     planetRot: {x: 180, y: 35, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 25, y: -50, z: 4375}
+    planetPos: {x: 25, y: -50, z: 3525}
     planetRot: {x: 180, y: -165, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 10, y: -50, z: 4450}
+    planetPos: {x: 10, y: -50, z: 3600}
     planetRot: {x: 180, y: -150, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -25, y: -50, z: 4575}
+    planetPos: {x: -25, y: -50, z: 3725}
     planetRot: {x: 180, y: -165, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
@@ -4794,15 +4794,15 @@ MonoBehaviour:
     planetRot: {x: 180, y: 45, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: 35, y: -45, z: 4980}
+    planetPos: {x: 35, y: -45, z: 4045}
     planetRot: {x: 180, y: -105, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: 25, y: -50, z: 4990}
+    planetPos: {x: 25, y: -50, z: 4055}
     planetRot: {x: 180, y: -120, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: -20, y: -50, z: 5115}
+    planetPos: {x: -20, y: -50, z: 4180}
     planetRot: {x: 180, y: -105, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
