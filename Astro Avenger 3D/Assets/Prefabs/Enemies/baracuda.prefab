@@ -457,17 +457,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 4
   pathTypes: 0
-  enemyMover: {fileID: 0}
   startSpeed: 7.5
   speed: 7.5
-  tilt: 2
   tumble: 0
   offsetZ: -25
   targetAims: []
   weapons:
   - {fileID: 114209918355679006}
   distIn: 20
-  distBlast: 12.5
+  distBlast: 17.5
+  distStop: 12.5
   distOut: 5
   astroLiner: {fileID: 0}
   shark: {fileID: 0}

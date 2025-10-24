@@ -867,7 +867,8 @@ MonoBehaviour:
   weapons:
   - {fileID: 114367129217166174}
   distIn: 60
-  distBlast: 50
+  distBlast: 15
+  distStop: 0
   distOut: 0
   astroLiner: {fileID: 114809803279326142}
   shark: {fileID: 0}
@@ -898,10 +899,10 @@ MonoBehaviour:
   - {fileID: 4386359036786046}
   burstSpawnsL: []
   burstSpawnsR: []
-  startTime: 3
-  maxTime: 5
-  maxRetime: 5
-  maxLaserCount: 3
+  startTime: 0.1
+  maxTime: 1.25
+  maxRetime: 1.25
+  maxLaserCount: 100
   isLaserRotate: 0
   playName: long_lazer
 --- !u!114 &114809803279326142

@@ -377,7 +377,8 @@ MonoBehaviour:
   - {fileID: 114356652230081048}
   - {fileID: 114317062111114078}
   distIn: 30
-  distBlast: 20
+  distBlast: 27.5
+  distStop: 17.5
   distOut: 10
   astroLiner: {fileID: 0}
   shark: {fileID: 0}

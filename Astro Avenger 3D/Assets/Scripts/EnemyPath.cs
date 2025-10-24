@@ -16,6 +16,7 @@ public class EnemyPath : MonoBehaviour
     public EnemyWeapon[] weapons;
     public float distIn;
     public float distBlast;
+    public float distStop;
     public float distOut;
     public AstroLiner astroLiner;
     public Shark shark;
@@ -266,7 +267,7 @@ public class EnemyPath : MonoBehaviour
                     }
                 }
             }
-            else if (dist > distBlast && enemyTypes == EnemyType.Chase || enemyTypes == EnemyType.TimeChase)
+            else if (dist > distBlast && enemyTypes == EnemyType.Chase || enemyTypes == EnemyType.TimeChase || dist > distBlast && enemyTypes == EnemyType.Turrel || dist > distBlast && enemyTypes == EnemyType.Shoot)
             {
                 foreach (EnemyWeapon weapon in weapons)
                 {
@@ -429,11 +430,11 @@ public class EnemyPath : MonoBehaviour
         {
             Hit();
         }
-        if (dist > distBlast && enemyTypes == EnemyType.Chase || enemyTypes == EnemyType.Path && pathTypes == PathType.Scorpion && time >= 3 || enemyTypes == EnemyType.Path && pathTypes == PathType.PowerBull && time >= 0.5f)
+        if (dist > distStop && enemyTypes == EnemyType.Chase || enemyTypes == EnemyType.Path && pathTypes == PathType.Scorpion && time >= 3 || enemyTypes == EnemyType.Path && pathTypes == PathType.PowerBull && time >= 0.5f)
         {
             rb.velocity = transform.forward * speed;
         }
-        if (dist > distOut && enemyTypes == EnemyType.Chase && dist < distBlast && enemyTypes == EnemyType.Chase)
+        if (dist > distOut && enemyTypes == EnemyType.Chase && dist < distStop && enemyTypes == EnemyType.Chase)
         {
             rb.velocity = Vector3.zero;
         }
@@ -535,10 +536,12 @@ public class EnemyPath : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, distIn);
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, distBlast);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, distStop);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, distOut);
     }

@@ -555,14 +555,14 @@ MonoBehaviour:
   pathTypes: 2
   startSpeed: 5
   speed: 15
-  tilt: 45
   tumble: 0
   offsetZ: -25
   targetAims: []
   weapons:
   - {fileID: 114790840363028092}
   distIn: 20
-  distBlast: 10
+  distBlast: 15
+  distStop: 10
   distOut: 2.5
   astroLiner: {fileID: 0}
   shark: {fileID: 0}

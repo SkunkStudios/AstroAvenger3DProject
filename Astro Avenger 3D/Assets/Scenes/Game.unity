@@ -26537,13 +26537,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391817255}
-  m_LocalRotation: {x: 0.18023993, y: -0.37533024, z: 0.07465782, w: 0.90612745}
+  m_LocalRotation: {x: 0.19616088, y: -0.4126005, z: 0.09147132, w: 0.8848247}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 22.5, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: -50, z: 0}
 --- !u!1 &1401017545
 GameObject:
   m_ObjectHideFlags: 0
@@ -29802,9 +29802,7 @@ MonoBehaviour:
   - {fileID: 1604599597639789, guid: f5a79b2acd5d2734086b28d68e930879, type: 3}
   - {fileID: 1175681655177105, guid: daa7eee9d564d194289d55337bf0c21c, type: 3}
   sanic: {fileID: 1539631988920076, guid: 86e85e0113345e343af858c8cde61185, type: 3}
-  urlInfoScreen:
-  - https://play-lh.googleusercontent.com/xlXaIi3hPKk7d-zAHpNYLAkRA_S-h4hlC3jymD8VqS2oZuuX3zLCLPcrUd0rGHirOg
-  - https://play-lh.googleusercontent.com/QYlvXIcmZgdeE_i0FlNFCsMB4f7VXjEx8BvHlxe58Ydgnaq--Yw6axicQVnIf9gstLk
+  urlInfoScreen: []
 --- !u!4 &2059146811
 Transform:
   m_ObjectHideFlags: 0
@@ -35090,6 +35088,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonuses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

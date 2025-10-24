@@ -127,7 +127,6 @@ MonoBehaviour:
   pathTypes: 0
   startSpeed: 2.5
   speed: 2.5
-  tilt: 0
   tumble: 0
   offsetZ: -20
   targetAims: []
@@ -135,6 +134,7 @@ MonoBehaviour:
   - {fileID: 114752546448879210}
   distIn: 60
   distBlast: 50
+  distStop: 0
   distOut: 0
   astroLiner: {fileID: 0}
   shark: {fileID: 0}

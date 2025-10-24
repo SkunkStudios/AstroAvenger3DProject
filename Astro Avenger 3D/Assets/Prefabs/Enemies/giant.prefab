@@ -532,7 +532,8 @@ MonoBehaviour:
   weapons:
   - {fileID: 114217639845375738}
   distIn: 20
-  distBlast: 12.5
+  distBlast: 17.5
+  distStop: 12.5
   distOut: 5
   astroLiner: {fileID: 0}
   shark: {fileID: 0}
