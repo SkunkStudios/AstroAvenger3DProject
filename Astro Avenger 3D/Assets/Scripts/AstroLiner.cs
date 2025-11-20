@@ -24,32 +24,57 @@ public class AstroLiner : MonoBehaviour
 
     public void EnemyLauncher()
     {
+        GameObject enemy;
         if (enemyCount == 0 && enemySpawns[0] != null && enemySpawns[4] != null)
         {
-            Instantiate(termit, enemySpawns[0].transform.position, enemySpawns[0].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[0].transform.position;
+            enemy.transform.rotation = enemySpawns[0].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[0]);
-            Instantiate(termit, enemySpawns[4].transform.position, enemySpawns[4].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[4].transform.position;
+            enemy.transform.rotation = enemySpawns[4].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[4]);
         }
         else if (enemyCount == 1 && enemySpawns[1] != null && enemySpawns[5] != null)
         {
-            Instantiate(termit, enemySpawns[1].transform.position, enemySpawns[1].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[1].transform.position;
+            enemy.transform.rotation = enemySpawns[1].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[1]);
-            Instantiate(termit, enemySpawns[5].transform.position, enemySpawns[5].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[5].transform.position;
+            enemy.transform.rotation = enemySpawns[5].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[5]);
         }
         else if (enemyCount == 2 && enemySpawns[2] != null && enemySpawns[6] != null)
         {
-            Instantiate(termit, enemySpawns[2].transform.position, enemySpawns[2].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[2].transform.position;
+            enemy.transform.rotation = enemySpawns[2].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[2]);
-            Instantiate(termit, enemySpawns[6].transform.position, enemySpawns[6].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[6].transform.position;
+            enemy.transform.rotation = enemySpawns[6].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[6]);
         }
         else if (enemyCount == 3 && enemySpawns[3] != null && enemySpawns[7] != null)
         {
-            Instantiate(termit, enemySpawns[3].transform.position, enemySpawns[3].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[3].transform.position;
+            enemy.transform.rotation = enemySpawns[3].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[3]);
-            Instantiate(termit, enemySpawns[7].transform.position, enemySpawns[7].transform.rotation);
+            enemy = Instantiate(termit) as GameObject;
+            enemy.transform.position = enemySpawns[7].transform.position;
+            enemy.transform.rotation = enemySpawns[7].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
             Destroy(enemySpawns[7]);
         }
         enemyCount++;

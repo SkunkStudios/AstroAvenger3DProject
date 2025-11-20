@@ -22,7 +22,7 @@ public class Orbit : MonoBehaviour
             }
             else
             {
-                transform.Rotate(-Vector3.forward * Time.deltaTime * 3);
+                transform.Rotate(-Vector3.forward * Time.deltaTime * 4);
             }
         }
     }

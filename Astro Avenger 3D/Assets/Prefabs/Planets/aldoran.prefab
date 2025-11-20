@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: -60, z: 0}
+  axis: {x: 0, y: -30, z: 0}
   isAxisX: 0
   isOrbit: 1
 --- !u!1 &7478537701070856556
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 60}
+  axis: {x: 0, y: 0, z: 30}
   isAxisX: 0
   isOrbit: 1
 --- !u!1 &7478537702761236212

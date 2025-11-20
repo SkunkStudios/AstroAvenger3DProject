@@ -8,17 +8,19 @@ public class Shark : MonoBehaviour
 
     public IEnumerator EnemyLauncher()
     {
-        yield return new WaitForSeconds(16f);
-        Instantiate(locust, enemySpawns[0].position, enemySpawns[0].rotation);
-        Instantiate(locust, enemySpawns[1].position, enemySpawns[1].rotation);
-        yield return new WaitForSeconds(1f);
-        Instantiate(locust, enemySpawns[0].position, enemySpawns[0].rotation);
-        Instantiate(locust, enemySpawns[1].position, enemySpawns[1].rotation);
-        yield return new WaitForSeconds(1f);
-        Instantiate(locust, enemySpawns[0].position, enemySpawns[0].rotation);
-        Instantiate(locust, enemySpawns[1].position, enemySpawns[1].rotation);
-        yield return new WaitForSeconds(1f);
-        Instantiate(locust, enemySpawns[0].position, enemySpawns[0].rotation);
-        Instantiate(locust, enemySpawns[1].position, enemySpawns[1].rotation);
+        yield return new WaitForSeconds(15);
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject enemy;
+            enemy = Instantiate(locust) as GameObject;
+            enemy.transform.position = enemySpawns[0].transform.position;
+            enemy.transform.rotation = enemySpawns[0].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
+            enemy = Instantiate(locust) as GameObject;
+            enemy.transform.position = enemySpawns[1].transform.position;
+            enemy.transform.rotation = enemySpawns[1].transform.rotation;
+            enemy.GetComponent<EnemyPath>().enemyTypes = EnemyPath.EnemyType.Chase;
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

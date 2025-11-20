@@ -4718,14 +4718,14 @@ MonoBehaviour:
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 2948877337094832564, guid: bac12feac6371a748acad9f5d13668f1,
       type: 3}
-    planetPos: {x: -75, y: -300, z: 380}
+    planetPos: {x: -75, y: -320, z: 400}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 95656559965129921, guid: b25ec930259663140a09f2a3f33e3222, type: 3}
     planetPos: {x: -30, y: -165, z: 345}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 2408193884914805043, guid: 690544e69c6008a4fa717cb123ebcb49,
       type: 3}
-    planetPos: {x: 5, y: -175, z: 335}
+    planetPos: {x: 10, y: -200, z: 360}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}

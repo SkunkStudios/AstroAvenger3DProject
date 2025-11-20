@@ -426,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 4
   pathTypes: 0
-  startSpeed: 2.5
+  startSpeed: 2
   speed: 15
   tumble: 0
   offsetZ: -20

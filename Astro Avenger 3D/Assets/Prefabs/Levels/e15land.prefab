@@ -4714,14 +4714,14 @@ MonoBehaviour:
   planets:
   - planet: {fileID: 8720682400166193422, guid: f2168855110afc34a9d3c4211783a8d0,
       type: 3}
-    planetPos: {x: -15, y: -80, z: 60}
+    planetPos: {x: -12.5, y: -75, z: 55}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 5304824011094096711, guid: 8ddb87aeaff17bc49917611d1e99d6db,
       type: 3}
     planetPos: {x: 40, y: -175, z: 195}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 672889048672921140, guid: a3348689b5729cb418a97566d84470d4, type: 3}
-    planetPos: {x: -15, y: -345, z: 540}
+    planetPos: {x: -15, y: -200, z: 330}
     planetRot: {x: 0, y: 4.5, z: 0}
   - planet: {fileID: 2865407658744200284, guid: 1658f9a8177af744eb921d8d1cd04b9f,
       type: 3}

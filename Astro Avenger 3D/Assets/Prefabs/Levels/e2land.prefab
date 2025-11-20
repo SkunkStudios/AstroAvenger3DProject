@@ -4714,7 +4714,7 @@ MonoBehaviour:
   planets:
   - planet: {fileID: 7189739497045743533, guid: 50876d8b465b1e14e954855dad26b9f8,
       type: 3}
-    planetPos: {x: 35, y: -95, z: 75}
+    planetPos: {x: 32.5, y: -95, z: 75}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 2948877337094832564, guid: bac12feac6371a748acad9f5d13668f1,
       type: 3}
@@ -4722,11 +4722,11 @@ MonoBehaviour:
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 5591433195200533322, guid: 7a1629f2696fc34458c483fb527f7986,
       type: 3}
-    planetPos: {x: -20, y: -110, z: 220}
+    planetPos: {x: -20, y: -110, z: 222.5}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 2408193884914805043, guid: 690544e69c6008a4fa717cb123ebcb49,
       type: 3}
-    planetPos: {x: -10, y: -125, z: 265}
+    planetPos: {x: -15, y: -115, z: 265}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 2948877337094832564, guid: bac12feac6371a748acad9f5d13668f1,
       type: 3}
@@ -4738,103 +4738,103 @@ MonoBehaviour:
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 0, y: -50, z: 1525}
+    planetPos: {x: 0, y: -45, z: 1500}
     planetRot: {x: 180, y: 15, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 30, y: -45, z: 1575}
+    planetPos: {x: 30, y: -40, z: 1550}
     planetRot: {x: 180, y: 30, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 20, y: -45, z: 3750}
+    planetPos: {x: 20, y: -40, z: 3745}
     planetRot: {x: 180, y: 20, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 10, y: -55, z: 3825}
+    planetPos: {x: 10, y: -50, z: 3820}
     planetRot: {x: 180, y: 35, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -25, y: -40, z: 3950}
+    planetPos: {x: -25, y: -35, z: 3945}
     planetRot: {x: 180, y: -160, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 35, y: -50, z: 7625}
+    planetPos: {x: 35, y: -45, z: 7620}
     planetRot: {x: 180, y: 30, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 15, y: -25, z: 7875}
+    planetPos: {x: 15, y: -20, z: 7870}
     planetRot: {x: 180, y: -150, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 30, y: -30, z: 7925}
+    planetPos: {x: 30, y: -25, z: 7920}
     planetRot: {x: 180, y: -30, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -15, y: -50, z: 8375}
+    planetPos: {x: -15, y: -45, z: 8370}
     planetRot: {x: 180, y: 30, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -35, y: -50, z: 8450}
+    planetPos: {x: -35, y: -45, z: 8445}
     planetRot: {x: 180, y: 0, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 20, y: -25, z: 9425}
+    planetPos: {x: 20, y: -20, z: 9420}
     planetRot: {x: 180, y: 15, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -10, y: -25, z: 9750}
+    planetPos: {x: -10, y: -20, z: 9745}
     planetRot: {x: 180, y: -135, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -20, y: -25, z: 9800}
+    planetPos: {x: -20, y: -20, z: 9795}
     planetRot: {x: 180, y: 180, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -10, y: -25, z: 9850}
+    planetPos: {x: -10, y: -20, z: 9845}
     planetRot: {x: 180, y: -45, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -30, y: -25, z: 11575}
+    planetPos: {x: -30, y: -20, z: 11570}
     planetRot: {x: 180, y: 120, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -20, y: -35, z: 11585}
+    planetPos: {x: -20, y: -30, z: 11580}
     planetRot: {x: 180, y: 175, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -5, y: -30, z: 11655}
+    planetPos: {x: -5, y: -25, z: 11650}
     planetRot: {x: 180, y: -15, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -35, y: -25, z: 11675}
+    planetPos: {x: -30, y: -20, z: 11665}
     planetRot: {x: 180, y: 120, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -25, y: -35, z: 11725}
+    planetPos: {x: -25, y: -30, z: 11720}
     planetRot: {x: 180, y: -175, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 25, y: -40, z: 12050}
+    planetPos: {x: 25, y: -35, z: 12035}
     planetRot: {x: 180, y: -20, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -25, y: -50, z: 14000}
+    planetPos: {x: -25, y: -45, z: 13995}
     planetRot: {x: 180, y: -45, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: -10, y: -50, z: 14075}
+    planetPos: {x: -10, y: -45, z: 14070}
     planetRot: {x: 180, y: -15, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}
-    planetPos: {x: 25, y: -50, z: 14500}
+    planetPos: {x: 25, y: -45, z: 14495}
     planetRot: {x: 180, y: -25, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: 10, y: -75, z: 1780}
+    planetPos: {x: 10, y: -75, z: 1775}
     planetRot: {x: 180, y: 45, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: 30, y: -70, z: 1830}
+    planetPos: {x: 30, y: -70, z: 1825}
     planetRot: {x: 180, y: 45, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
@@ -4886,11 +4886,11 @@ MonoBehaviour:
     planetRot: {x: 180, y: 60, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: -30, y: -50, z: 13025}
+    planetPos: {x: -35, y: -50, z: 13025}
     planetRot: {x: 180, y: -115, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}
-    planetPos: {x: 45, y: -50, z: 13375}
+    planetPos: {x: 45, y: -50, z: 13360}
     planetRot: {x: 180, y: 50, z: 0}
   - planet: {fileID: 2875461696848155433, guid: 6df94ab96489ec04eae772c74a9ded02,
       type: 3}

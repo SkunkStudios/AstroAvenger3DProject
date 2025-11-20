@@ -1365,17 +1365,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 0
   pathTypes: 0
-  startSpeed: 2.5
-  speed: 2.5
+  startSpeed: 2
+  speed: 2
   tumble: 0
   offsetZ: -50
   targetAims: []
   weapons: []
   distIn: 0
   distBlast: 0
+  distStop: 0
   distOut: 0
   astroLiner: {fileID: 0}
+  shark: {fileID: 0}
   animation: {fileID: 0}
+  openAnimation: {fileID: 0}
+  closeAnimation: {fileID: 0}
   mathfRot: 45
 --- !u!114 &114438921578827750
 MonoBehaviour:

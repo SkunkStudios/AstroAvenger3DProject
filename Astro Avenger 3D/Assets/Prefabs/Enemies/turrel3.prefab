@@ -95,8 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes: 8
   pathTypes: 0
-  startSpeed: 2.5
-  speed: 2.5
+  startSpeed: 2
+  speed: 2
   tumble: 0
   offsetZ: -20
   targetAims:
@@ -105,7 +105,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 114786127194023044}
   distIn: 60
-  distBlast: 50
+  distBlast: 45
   distStop: 0
   distOut: 0
   astroLiner: {fileID: 0}
@@ -139,10 +139,10 @@ MonoBehaviour:
   - {fileID: 4701222108615490}
   burstSpawnsL: []
   burstSpawnsR: []
-  startTime: 1
-  maxTime: 0.5
-  maxRetime: 2
-  maxLaserCount: 3
+  startTime: 0.5
+  maxTime: 0
+  maxRetime: 0.5
+  maxLaserCount: 1
   isLaserRotate: 0
   playName: destroyer_strait
 --- !u!1 &1622912885912556

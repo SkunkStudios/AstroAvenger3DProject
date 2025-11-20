@@ -4717,11 +4717,11 @@ MonoBehaviour:
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 4602612671682323974, guid: 497724c0d1e4703409723eec232dc3fc,
       type: 3}
-    planetPos: {x: -30, y: -100, z: 125}
+    planetPos: {x: -22.5, y: -105, z: 135}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 5625946211793431887, guid: 48c9fa81f0ab4f340badc5b0517bdc0e,
       type: 3}
-    planetPos: {x: 10, y: -75, z: 175}
+    planetPos: {x: 10, y: -150, z: 300}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 6545387174240736888, guid: 453abc78316a8ef418393724323aab1a,
       type: 3}

@@ -169,7 +169,7 @@ public class Destroyer : MonoBehaviour
         }
         if (energy < maxEnergy[energyUpgrade])
         {
-            energy += Time.deltaTime * 500;
+            energy += Time.deltaTime * 150;
         }
         else if (energy > maxEnergy[energyUpgrade])
         {
@@ -229,6 +229,15 @@ public class Destroyer : MonoBehaviour
             {
                 weapon.dischargeLight.enabled = true;
                 soundClip.PlaySound("destroyer_lazer4");
+            }
+            else if (lazers != Destroyer.Lazer.Lazer3)
+            {
+                weapon.dischargeLight.enabled = false;
+                for (int i = 0; i < 5; i++)
+                {
+                    weapon.dischargesPS[i].Stop();
+                    weapon.discharges[i].enabled = false;
+                }
             }
             if (lazers > Destroyer.Lazer.Lazer5)
             {
