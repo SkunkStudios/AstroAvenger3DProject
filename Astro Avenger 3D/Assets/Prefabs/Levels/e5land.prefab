@@ -4721,7 +4721,7 @@ MonoBehaviour:
     planetPos: {x: 42.5, y: -147.5, z: 258.75}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 672889048672921140, guid: a3348689b5729cb418a97566d84470d4, type: 3}
-    planetPos: {x: 221.75, y: -50, z: 1650}
+    planetPos: {x: 213, y: -65, z: 1650}
     planetRot: {x: 0, y: 4.5, z: 0}
   - planet: {fileID: 3009098998161870478, guid: 3854bda0fef63eb45843aa8826d91088,
       type: 3}
