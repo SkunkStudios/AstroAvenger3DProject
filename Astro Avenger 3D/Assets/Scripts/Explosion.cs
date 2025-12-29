@@ -9,7 +9,6 @@ public class Explosion : MonoBehaviour
     private Light explosionLight;
     private ParticleSystemRenderer explosionPs;
     public ParticleSystemRenderer partPs;
-    private float startTime;
 
     void Awake()
     {
@@ -21,11 +20,5 @@ public class Explosion : MonoBehaviour
 	{
         explosionPs.material = explosionMat[Random.Range(0, explosionMat.Length)];
         partPs.mesh = part[Random.Range(0, part.Length)];
-        startTime = Time.time;
-    }
-
-    void Update()
-    {
-        explosionLight.intensity = Mathf.Lerp(10, 0, (Time.time - startTime) / 0.64f);
     }
 }
