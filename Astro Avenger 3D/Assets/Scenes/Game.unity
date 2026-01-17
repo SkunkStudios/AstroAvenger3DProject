@@ -19345,8 +19345,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905807886}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -200, z: 200}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: -100, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -25975,7 +25975,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ad587f2d6a6a6b142baa69fda95d213a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -29662,7 +29662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  isMemeSounds: 0
+  isMemeSounds: 1
   dealWithIt: {fileID: 1071826487693708, guid: 42b5c76f4194aab42b02ba590827effd, type: 3}
   frog: {fileID: 1350806608098784, guid: 9f8e6cc76d67c7845a91c7a94894c974, type: 3}
   randomVideo:

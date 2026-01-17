@@ -4713,7 +4713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planets:
   - planet: {fileID: 23103757342744733, guid: ad5c9434035d57a40a141c6a0894b715, type: 3}
-    planetPos: {x: 0, y: -115, z: 20}
+    planetPos: {x: 0, y: -115, z: 25}
     planetRot: {x: 0, y: 0, z: 0}
   - planet: {fileID: 4602612671682323974, guid: 497724c0d1e4703409723eec232dc3fc,
       type: 3}

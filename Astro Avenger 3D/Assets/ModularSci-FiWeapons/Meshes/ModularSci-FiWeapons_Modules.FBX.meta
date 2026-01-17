@@ -1,7 +1,9 @@
 fileFormatVersion: 2
 guid: af76bc657211dd145a3a8ffa70817e93
+timeCreated: 1556461367
+licenseType: Store
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: ModularSci-FiWeapons_Barrel1-Low
     100002: ModularSci-FiWeapons_Barrel2-Low
@@ -44,47 +46,6 @@ ModelImporter:
     100076: //RootNode
     100078: ModularSci-FiWeapons_Swivel1-Low
     100080: ModularSci-FiWeapons_Swivel2-Low
-    100082: ModularSci-FiWeapons_Barrel1
-    100084: ModularSci-FiWeapons_Barrel2
-    100086: ModularSci-FiWeapons_Barrel3
-    100088: ModularSci-FiWeapons_Barrel4
-    100090: ModularSci-FiWeapons_Barrel5
-    100092: ModularSci-FiWeapons_Barrel6
-    100094: ModularSci-FiWeapons_BarrelDetail1
-    100096: ModularSci-FiWeapons_BarrelDetail2
-    100098: ModularSci-FiWeapons_BarrelDetail3
-    100100: ModularSci-FiWeapons_BarrelDetail4
-    100102: ModularSci-FiWeapons_BarrelDetail5
-    100104: ModularSci-FiWeapons_Base1
-    100106: ModularSci-FiWeapons_Base2
-    100108: ModularSci-FiWeapons_Base3
-    100110: ModularSci-FiWeapons_Breech1
-    100112: ModularSci-FiWeapons_Breech2
-    100114: ModularSci-FiWeapons_Breech3
-    100116: ModularSci-FiWeapons_Breech4
-    100118: ModularSci-FiWeapons_Breech5
-    100120: ModularSci-FiWeapons_Details1
-    100122: ModularSci-FiWeapons_Details2
-    100124: ModularSci-FiWeapons_Details3
-    100126: ModularSci-FiWeapons_Details4
-    100128: ModularSci-FiWeapons_Details5
-    100130: ModularSci-FiWeapons_Details6
-    100132: ModularSci-FiWeapons_Details6_Mirrored
-    100134: ModularSci-FiWeapons_Launcher1
-    100136: ModularSci-FiWeapons_Launcher2
-    100138: ModularSci-FiWeapons_Launcher3
-    100140: ModularSci-FiWeapons_Launcher4
-    100142: ModularSci-FiWeapons_Launcher5
-    100144: ModularSci-FiWeapons_Launcher6
-    100146: ModularSci-FiWeapons_Missile1
-    100148: ModularSci-FiWeapons_Missile2
-    100150: ModularSci-FiWeapons_Missile3
-    100152: ModularSci-FiWeapons_Missile4
-    100154: ModularSci-FiWeapons_MissileDetail1
-    100156: ModularSci-FiWeapons_MissileDetail2
-    100158: ModularSci-FiWeapons_MissileDetail3
-    100160: ModularSci-FiWeapons_Swivel1
-    100162: ModularSci-FiWeapons_Swivel2
     400000: ModularSci-FiWeapons_Barrel1-Low
     400002: ModularSci-FiWeapons_Barrel2-Low
     400004: ModularSci-FiWeapons_Barrel3-Low
@@ -126,47 +87,6 @@ ModelImporter:
     400076: //RootNode
     400078: ModularSci-FiWeapons_Swivel1-Low
     400080: ModularSci-FiWeapons_Swivel2-Low
-    400082: ModularSci-FiWeapons_Barrel1
-    400084: ModularSci-FiWeapons_Barrel2
-    400086: ModularSci-FiWeapons_Barrel3
-    400088: ModularSci-FiWeapons_Barrel4
-    400090: ModularSci-FiWeapons_Barrel5
-    400092: ModularSci-FiWeapons_Barrel6
-    400094: ModularSci-FiWeapons_BarrelDetail1
-    400096: ModularSci-FiWeapons_BarrelDetail2
-    400098: ModularSci-FiWeapons_BarrelDetail3
-    400100: ModularSci-FiWeapons_BarrelDetail4
-    400102: ModularSci-FiWeapons_BarrelDetail5
-    400104: ModularSci-FiWeapons_Base1
-    400106: ModularSci-FiWeapons_Base2
-    400108: ModularSci-FiWeapons_Base3
-    400110: ModularSci-FiWeapons_Breech1
-    400112: ModularSci-FiWeapons_Breech2
-    400114: ModularSci-FiWeapons_Breech3
-    400116: ModularSci-FiWeapons_Breech4
-    400118: ModularSci-FiWeapons_Breech5
-    400120: ModularSci-FiWeapons_Details1
-    400122: ModularSci-FiWeapons_Details2
-    400124: ModularSci-FiWeapons_Details3
-    400126: ModularSci-FiWeapons_Details4
-    400128: ModularSci-FiWeapons_Details5
-    400130: ModularSci-FiWeapons_Details6
-    400132: ModularSci-FiWeapons_Details6_Mirrored
-    400134: ModularSci-FiWeapons_Launcher1
-    400136: ModularSci-FiWeapons_Launcher2
-    400138: ModularSci-FiWeapons_Launcher3
-    400140: ModularSci-FiWeapons_Launcher4
-    400142: ModularSci-FiWeapons_Launcher5
-    400144: ModularSci-FiWeapons_Launcher6
-    400146: ModularSci-FiWeapons_Missile1
-    400148: ModularSci-FiWeapons_Missile2
-    400150: ModularSci-FiWeapons_Missile3
-    400152: ModularSci-FiWeapons_Missile4
-    400154: ModularSci-FiWeapons_MissileDetail1
-    400156: ModularSci-FiWeapons_MissileDetail2
-    400158: ModularSci-FiWeapons_MissileDetail3
-    400160: ModularSci-FiWeapons_Swivel1
-    400162: ModularSci-FiWeapons_Swivel2
     2100000: No Name
     2300000: ModularSci-FiWeapons_Barrel1-Low
     2300002: ModularSci-FiWeapons_Barrel2-Low
@@ -208,47 +128,6 @@ ModelImporter:
     2300074: ModularSci-FiWeapons_MissileDetail3-Low
     2300076: ModularSci-FiWeapons_Swivel1-Low
     2300078: ModularSci-FiWeapons_Swivel2-Low
-    2300080: ModularSci-FiWeapons_Barrel1
-    2300082: ModularSci-FiWeapons_Barrel2
-    2300084: ModularSci-FiWeapons_Barrel3
-    2300086: ModularSci-FiWeapons_Barrel4
-    2300088: ModularSci-FiWeapons_Barrel5
-    2300090: ModularSci-FiWeapons_Barrel6
-    2300092: ModularSci-FiWeapons_BarrelDetail1
-    2300094: ModularSci-FiWeapons_BarrelDetail2
-    2300096: ModularSci-FiWeapons_BarrelDetail3
-    2300098: ModularSci-FiWeapons_BarrelDetail4
-    2300100: ModularSci-FiWeapons_BarrelDetail5
-    2300102: ModularSci-FiWeapons_Base1
-    2300104: ModularSci-FiWeapons_Base2
-    2300106: ModularSci-FiWeapons_Base3
-    2300108: ModularSci-FiWeapons_Breech1
-    2300110: ModularSci-FiWeapons_Breech2
-    2300112: ModularSci-FiWeapons_Breech3
-    2300114: ModularSci-FiWeapons_Breech4
-    2300116: ModularSci-FiWeapons_Breech5
-    2300118: ModularSci-FiWeapons_Details1
-    2300120: ModularSci-FiWeapons_Details2
-    2300122: ModularSci-FiWeapons_Details3
-    2300124: ModularSci-FiWeapons_Details4
-    2300126: ModularSci-FiWeapons_Details5
-    2300128: ModularSci-FiWeapons_Details6
-    2300130: ModularSci-FiWeapons_Details6_Mirrored
-    2300132: ModularSci-FiWeapons_Launcher1
-    2300134: ModularSci-FiWeapons_Launcher2
-    2300136: ModularSci-FiWeapons_Launcher3
-    2300138: ModularSci-FiWeapons_Launcher4
-    2300140: ModularSci-FiWeapons_Launcher5
-    2300142: ModularSci-FiWeapons_Launcher6
-    2300144: ModularSci-FiWeapons_Missile1
-    2300146: ModularSci-FiWeapons_Missile2
-    2300148: ModularSci-FiWeapons_Missile3
-    2300150: ModularSci-FiWeapons_Missile4
-    2300152: ModularSci-FiWeapons_MissileDetail1
-    2300154: ModularSci-FiWeapons_MissileDetail2
-    2300156: ModularSci-FiWeapons_MissileDetail3
-    2300158: ModularSci-FiWeapons_Swivel1
-    2300160: ModularSci-FiWeapons_Swivel2
     3300000: ModularSci-FiWeapons_Barrel1-Low
     3300002: ModularSci-FiWeapons_Barrel2-Low
     3300004: ModularSci-FiWeapons_Barrel3-Low
@@ -289,47 +168,6 @@ ModelImporter:
     3300074: ModularSci-FiWeapons_MissileDetail3-Low
     3300076: ModularSci-FiWeapons_Swivel1-Low
     3300078: ModularSci-FiWeapons_Swivel2-Low
-    3300080: ModularSci-FiWeapons_Barrel1
-    3300082: ModularSci-FiWeapons_Barrel2
-    3300084: ModularSci-FiWeapons_Barrel3
-    3300086: ModularSci-FiWeapons_Barrel4
-    3300088: ModularSci-FiWeapons_Barrel5
-    3300090: ModularSci-FiWeapons_Barrel6
-    3300092: ModularSci-FiWeapons_BarrelDetail1
-    3300094: ModularSci-FiWeapons_BarrelDetail2
-    3300096: ModularSci-FiWeapons_BarrelDetail3
-    3300098: ModularSci-FiWeapons_BarrelDetail4
-    3300100: ModularSci-FiWeapons_BarrelDetail5
-    3300102: ModularSci-FiWeapons_Base1
-    3300104: ModularSci-FiWeapons_Base2
-    3300106: ModularSci-FiWeapons_Base3
-    3300108: ModularSci-FiWeapons_Breech1
-    3300110: ModularSci-FiWeapons_Breech2
-    3300112: ModularSci-FiWeapons_Breech3
-    3300114: ModularSci-FiWeapons_Breech4
-    3300116: ModularSci-FiWeapons_Breech5
-    3300118: ModularSci-FiWeapons_Details1
-    3300120: ModularSci-FiWeapons_Details2
-    3300122: ModularSci-FiWeapons_Details3
-    3300124: ModularSci-FiWeapons_Details4
-    3300126: ModularSci-FiWeapons_Details5
-    3300128: ModularSci-FiWeapons_Details6
-    3300130: ModularSci-FiWeapons_Details6_Mirrored
-    3300132: ModularSci-FiWeapons_Launcher1
-    3300134: ModularSci-FiWeapons_Launcher2
-    3300136: ModularSci-FiWeapons_Launcher3
-    3300138: ModularSci-FiWeapons_Launcher4
-    3300140: ModularSci-FiWeapons_Launcher5
-    3300142: ModularSci-FiWeapons_Launcher6
-    3300144: ModularSci-FiWeapons_Missile1
-    3300146: ModularSci-FiWeapons_Missile2
-    3300148: ModularSci-FiWeapons_Missile3
-    3300150: ModularSci-FiWeapons_Missile4
-    3300152: ModularSci-FiWeapons_MissileDetail1
-    3300154: ModularSci-FiWeapons_MissileDetail2
-    3300156: ModularSci-FiWeapons_MissileDetail3
-    3300158: ModularSci-FiWeapons_Swivel1
-    3300160: ModularSci-FiWeapons_Swivel2
     4300000: ModularSci-FiWeapons_Breech3-Low
     4300002: ModularSci-FiWeapons_Breech4-Low
     4300004: ModularSci-FiWeapons_Breech5-Low
@@ -370,47 +208,6 @@ ModelImporter:
     4300074: ModularSci-FiWeapons_Swivel1-Low
     4300076: ModularSci-FiWeapons_BarrelDetail1-Low
     4300078: ModularSci-FiWeapons_Swivel2-Low
-    4300080: ModularSci-FiWeapons_Breech3
-    4300082: ModularSci-FiWeapons_Breech4
-    4300084: ModularSci-FiWeapons_Breech5
-    4300086: ModularSci-FiWeapons_Details2
-    4300088: ModularSci-FiWeapons_Details3
-    4300090: ModularSci-FiWeapons_Details4
-    4300092: ModularSci-FiWeapons_Details5
-    4300094: ModularSci-FiWeapons_Details6
-    4300096: ModularSci-FiWeapons_Base1
-    4300098: ModularSci-FiWeapons_Base2
-    4300100: ModularSci-FiWeapons_Base3
-    4300102: ModularSci-FiWeapons_Details1
-    4300104: ModularSci-FiWeapons_Barrel1
-    4300106: ModularSci-FiWeapons_Barrel2
-    4300108: ModularSci-FiWeapons_Barrel3
-    4300110: ModularSci-FiWeapons_Barrel4
-    4300112: ModularSci-FiWeapons_Barrel5
-    4300114: ModularSci-FiWeapons_BarrelDetail2
-    4300116: ModularSci-FiWeapons_BarrelDetail3
-    4300118: ModularSci-FiWeapons_BarrelDetail4
-    4300120: ModularSci-FiWeapons_Barrel6
-    4300122: ModularSci-FiWeapons_Breech1
-    4300124: ModularSci-FiWeapons_Breech2
-    4300126: ModularSci-FiWeapons_BarrelDetail5
-    4300128: ModularSci-FiWeapons_Missile1
-    4300130: ModularSci-FiWeapons_Missile2
-    4300132: ModularSci-FiWeapons_Missile3
-    4300134: ModularSci-FiWeapons_Missile4
-    4300136: ModularSci-FiWeapons_MissileDetail1
-    4300138: ModularSci-FiWeapons_MissileDetail2
-    4300140: ModularSci-FiWeapons_MissileDetail3
-    4300142: ModularSci-FiWeapons_Launcher2
-    4300144: ModularSci-FiWeapons_Launcher3
-    4300146: ModularSci-FiWeapons_Launcher4
-    4300148: ModularSci-FiWeapons_Launcher5
-    4300150: ModularSci-FiWeapons_Launcher6
-    4300152: ModularSci-FiWeapons_Launcher1
-    4300154: ModularSci-FiWeapons_Swivel1
-    4300156: ModularSci-FiWeapons_BarrelDetail1
-    4300158: ModularSci-FiWeapons_Swivel2
-    4300160: ModularSci-FiWeapons_Details6_Mirrored
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -430,7 +227,6 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -445,7 +241,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -463,16 +258,11 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -487,6 +277,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

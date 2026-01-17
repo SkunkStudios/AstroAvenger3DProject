@@ -24,7 +24,7 @@ public class CameraHit : MonoBehaviour
     public void Hit(float hit)
     {
         GameManager.zoomHit += hit;
-        if (hit == 3 || transform.eulerAngles.z != 0)
+        if (hit == 3 && transform.eulerAngles.z == 0 || transform.eulerAngles.z != 0)
         {
             GameManager.zoomRotHit = GameManager.zoomHit;
         }
