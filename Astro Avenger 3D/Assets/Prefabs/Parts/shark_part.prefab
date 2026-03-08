@@ -4834,7 +4834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 1.6
+  waitTime: 2.75
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -4890,7 +4890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3305a58a16e0e48a49d41862fc6dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 8
 --- !u!1 &1507153732561124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,7 +9725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 2.6
+  waitTime: 3.3
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -14563,7 +14563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 2.4
+  waitTime: 3.45
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -19401,7 +19401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 1.8
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -24239,7 +24239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.8
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -29077,7 +29077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 1.4
+  waitTime: 2.6
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -33915,7 +33915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 2.2
+  waitTime: 3.25
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -38753,7 +38753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 1.2
+  waitTime: 3.9
   isChildren: 0
   camHit: 3
   tumble: 0.5
@@ -43591,7 +43591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1496782402649274, guid: bde4ba86d0e356044a5dd6b387616910, type: 3}
   part: {fileID: 0}
-  waitTime: 1
+  waitTime: 3.75
   isChildren: 0
   camHit: 3
   tumble: 0.5

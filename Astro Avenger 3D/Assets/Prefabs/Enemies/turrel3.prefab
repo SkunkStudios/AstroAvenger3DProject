@@ -71,13 +71,13 @@ MonoBehaviour:
   exploreValues: {x: 0, y: 0, z: 0}
   bonus: {fileID: 0}
   parts: []
-  maxHealth: 750
+  maxHealth: 600
   isMeteorit: 0
   healthUI: {fileID: 0}
   healthBar: {fileID: 0}
   astroLiner: {fileID: 0}
   camHit: 0
-  scoreValue: 150
+  scoreValue: 300
   countTime: 0
   colliders:
   - {fileID: 3964184036843171622}
@@ -201,6 +201,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -212,6 +213,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

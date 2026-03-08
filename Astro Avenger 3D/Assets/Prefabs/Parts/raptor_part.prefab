@@ -4834,7 +4834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 1
+  waitTime: 1.4
   isChildren: 0
   camHit: 0
   tumble: 3
@@ -9672,7 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 1.4
+  waitTime: 2
   isChildren: 0
   camHit: 0
   tumble: 3
@@ -14510,7 +14510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 1.6
+  waitTime: 2.3
   isChildren: 0
   camHit: 0
   tumble: 3
@@ -14561,7 +14561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3305a58a16e0e48a49d41862fc6dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  time: 5
 --- !u!1 &1983902174452952
 GameObject:
   m_ObjectHideFlags: 0
@@ -19396,7 +19396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 1.2
+  waitTime: 1.7
   isChildren: 0
   camHit: 0
   tumble: 3

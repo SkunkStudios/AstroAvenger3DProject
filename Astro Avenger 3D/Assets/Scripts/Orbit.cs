@@ -7,6 +7,7 @@ public class Orbit : MonoBehaviour
 	public Vector3 axis;
 	public bool isAxisX;
 	public bool isOrbit;
+    public float rotateSpeed;
 
     void Update ()
 	{
@@ -22,7 +23,7 @@ public class Orbit : MonoBehaviour
             }
             else
             {
-                transform.Rotate(-Vector3.forward * Time.deltaTime * 4);
+                transform.Rotate(-Vector3.forward * Time.deltaTime * rotateSpeed);
             }
         }
     }

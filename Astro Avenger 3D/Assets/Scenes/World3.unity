@@ -251,6 +251,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 3
 --- !u!23 &23890512
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1068,6 +1069,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 4
 --- !u!23 &1101929852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6200,9 +6202,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a0cdc7cb78fd64f8021d0f23f43ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: -0.5}
+  axis: {x: 0, y: 0, z: -4}
   isAxisX: 0
   isOrbit: 1
+  rotateSpeed: 0
 --- !u!114 &1767713930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6234,6 +6237,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 2
 --- !u!33 &1768912421
 MeshFilter:
   m_ObjectHideFlags: 0

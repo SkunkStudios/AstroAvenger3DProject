@@ -4947,7 +4947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1674961390609350, guid: 3c11bf420351e3046a69557125981832, type: 3}
-  waitTime: 2.5
+  waitTime: 5.5
   isChildren: 1
   camHit: 3
   tumble: 3
@@ -5153,4 +5153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3305a58a16e0e48a49d41862fc6dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  time: 8

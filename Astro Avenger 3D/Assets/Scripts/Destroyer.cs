@@ -278,8 +278,10 @@ public class Destroyer : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 movement = new Vector3(moveHorizontal + mouseX * 2, 0.0f, moveVertical + mouseY * 2);
         if (!game.shop)
         {
             rb.velocity = movement * speed * Time.fixedDeltaTime;

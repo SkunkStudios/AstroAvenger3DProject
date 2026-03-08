@@ -82,7 +82,7 @@ public class Laser : MonoBehaviour
 
     void Hit()
     {
-        cameraHit.Hit(camHit);
+        cameraHit.Hit(camHit, transform.position.x);
         if (missile != null && missileSpawn.Length == 0)
         {
             Instantiate(missile, transform.position, Quaternion.identity);

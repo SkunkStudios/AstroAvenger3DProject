@@ -7122,6 +7122,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 4
 --- !u!1 &5587112041077935072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7156,6 +7157,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 4
 --- !u!1 &5587112041077935074
 GameObject:
   m_ObjectHideFlags: 0

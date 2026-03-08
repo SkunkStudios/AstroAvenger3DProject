@@ -18,15 +18,16 @@ public class CameraHit : MonoBehaviour
     void Update ()
 	{
         cam.fieldOfView = viewHit - GameManager.zoomHit * Mathf.Sin(GameManager.zoomHit * 3) * 0.25f;
-        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, -GameManager.zoomRotHit * Mathf.Sin(GameManager.zoomRotHit * 3) * 0.25f);
+        transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, GameManager.posXHit * GameManager.zoomRotHit * Mathf.Sin(GameManager.zoomRotHit * 3) * 0.25f / 10);
 	}
 
-    public void Hit(float hit)
+    public void Hit(float hit, float posX)
     {
         GameManager.zoomHit += hit;
-        if (hit == 3 && transform.eulerAngles.z == 0 || transform.eulerAngles.z != 0)
+        GameManager.zoomRotHit = GameManager.zoomHit;
+        if (posX != 0)
         {
-            GameManager.zoomRotHit = GameManager.zoomHit;
+            GameManager.posXHit = posX;
         }
     }
 }

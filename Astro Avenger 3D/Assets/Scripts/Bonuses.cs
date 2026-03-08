@@ -21,7 +21,7 @@ public class Bonuses : MonoBehaviour
 
     void Start()
     {
-        rb.velocity = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
+        rb.velocity = new Vector3(Random.Range(-5, 5), 0, -5);
         rb.angularVelocity = Random.insideUnitSphere * 10;
     }
 

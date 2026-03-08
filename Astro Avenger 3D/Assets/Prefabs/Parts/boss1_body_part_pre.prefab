@@ -4915,7 +4915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1421558204319804, guid: c311cc529b15bb44680840d4aaa21296, type: 3}
-  waitTime: 5.5
+  waitTime: 2
   isChildren: 1
   camHit: 3
   tumble: 3
@@ -9832,7 +9832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 9.5
+  waitTime: 6.5
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -19937,7 +19937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 8.5
+  waitTime: 6
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -24728,7 +24728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1408288504320516, guid: badc6df4f4474a5478198bb88e202975, type: 3}
-  waitTime: 4.5
+  waitTime: 2.3
   isChildren: 1
   camHit: 3
   tumble: 3

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public string[] urlInfoScreen;
     public static float zoomHit;
     public static float zoomRotHit;
+    public static float posXHit;
 
     void Start ()
 	{

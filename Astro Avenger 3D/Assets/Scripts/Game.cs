@@ -51,8 +51,13 @@ public class Game : MonoBehaviour
         {
             lifeText.text = "Life: " + life;
         }
+        if (Input.GetMouseButtonDown(0) && !gameOver || Input.GetMouseButtonDown(1) && !gameOver || Input.GetMouseButtonDown(2) && !gameOver)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         if (life <= 0 && gameOver)
         {
+            Cursor.lockState = CursorLockMode.None;
             GameObject.FindObjectOfType<SoundClip>().AudioStop();
         }
         RankScore();

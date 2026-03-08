@@ -124,7 +124,7 @@ public class EnemyHealth : MonoBehaviour
             if(exploreTypes == ExploreType.Off)
             {
                 game.AddScore(scoreValue);
-                cameraHit.Hit(camHit);
+                cameraHit.Hit(camHit, transform.position.x);
                 if (gameManager.isMemeSounds)
                 {
                     gameManager.MemeClipsUI();
@@ -223,7 +223,7 @@ public class EnemyHealth : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             yield return new WaitForSeconds(1.5f);
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
@@ -231,7 +231,7 @@ public class EnemyHealth : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             yield return new WaitForSeconds(0.5f);
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
@@ -239,7 +239,7 @@ public class EnemyHealth : MonoBehaviour
         for (int i = 0; i < 7; i++)
         {
             yield return new WaitForSeconds(0.4f);
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
@@ -247,7 +247,7 @@ public class EnemyHealth : MonoBehaviour
         for (int i = 0; i < 8; i++)
         {
             yield return new WaitForSeconds(0.3f);
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
@@ -255,7 +255,7 @@ public class EnemyHealth : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             yield return new WaitForSeconds(0.2f);
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
@@ -263,14 +263,14 @@ public class EnemyHealth : MonoBehaviour
         for (int i = 0; i < 40; i++)
         {
             yield return new WaitForSeconds(0.1f);
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(explore, explorePoint, Quaternion.identity);
         }
         for (int i = 0; i < 50; i++)
         {
-            cameraHit.Hit(3);
+            cameraHit.Hit(3, transform.position.x);
             soundClip.PlayExplosion();
             explorePoint = new Vector3(Random.Range(-exploreValues.x + transform.position.x, exploreValues.x + transform.position.x), Random.Range(-exploreValues.y + transform.position.y, exploreValues.y + transform.position.y), Random.Range(-exploreValues.z + transform.position.z, exploreValues.z + transform.position.z));
             Instantiate(bigExplore, explorePoint, Quaternion.identity);

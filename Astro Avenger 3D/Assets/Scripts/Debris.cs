@@ -44,7 +44,7 @@ public class Debris : MonoBehaviour
     IEnumerator WaitExplore(float time)
     {
         yield return new WaitForSeconds(time);
-        cameraHit.Hit(camHit);
+        cameraHit.Hit(camHit, transform.position.x);
         soundClip.PlayExplosion();
         if (isChildren)
         {

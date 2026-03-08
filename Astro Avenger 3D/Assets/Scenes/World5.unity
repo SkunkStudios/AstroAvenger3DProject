@@ -357,6 +357,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 3.75
 --- !u!23 &170881563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6524,6 +6525,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 3.75
 --- !u!23 &1600664763
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6715,6 +6717,7 @@ MonoBehaviour:
   axis: {x: 0, y: 0, z: 0}
   isAxisX: 0
   isOrbit: 0
+  rotateSpeed: 3.75
 --- !u!23 &1837653832
 MeshRenderer:
   m_ObjectHideFlags: 0

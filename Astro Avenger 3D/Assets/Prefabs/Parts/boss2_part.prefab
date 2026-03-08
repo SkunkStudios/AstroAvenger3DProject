@@ -4834,7 +4834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1165813729026800, guid: 00396ad77b0d5054e93f60836cfccdd9, type: 3}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -9672,7 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1908065620411192, guid: 33e57d5606136e748ac38c32f95a11e9, type: 3}
-  waitTime: 5.4
+  waitTime: 2.8
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -14510,7 +14510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1432182652714774, guid: ec474426383efdc488be4a5f935de501, type: 3}
-  waitTime: 5.6
+  waitTime: 3.6
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -19348,7 +19348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1243085429005752, guid: ef8b7782ff08a7045ba9a29b36ec3565, type: 3}
-  waitTime: 2.2
+  waitTime: 3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -24186,7 +24186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1014082850466626, guid: 41fc003b4a59b2949b05b6c02c894f9b, type: 3}
-  waitTime: 4.2
+  waitTime: 3.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -29074,7 +29074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 1359115577698844, guid: 4e4a98568f3a8e9439560987c11d2574, type: 3}
-  waitTime: 4
+  waitTime: 2
   isChildren: 0
   camHit: 3
   tumble: 3

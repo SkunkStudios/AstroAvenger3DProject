@@ -4834,7 +4834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -9672,7 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -14510,7 +14510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -19348,7 +19348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -24186,7 +24186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -29024,7 +29024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -33862,7 +33862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -38700,7 +38700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -43538,7 +43538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -48376,7 +48376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -53214,7 +53214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -58052,7 +58052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -62890,7 +62890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -67789,7 +67789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -72627,7 +72627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -77465,7 +77465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
@@ -82303,7 +82303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explore: {fileID: 1810207859813236, guid: 984d0a5bb63cc6f4e827266d28bf7143, type: 3}
   part: {fileID: 0}
-  waitTime: 2
+  waitTime: 2.3
   isChildren: 0
   camHit: 3
   tumble: 3
