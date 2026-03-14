@@ -11,7 +11,7 @@ public class Laser : MonoBehaviour
     public GameObject explore;
     public GameObject missile;
     public Transform[] missileSpawn;
-    public int damage;
+    public float damage;
     [HideInInspector]
     public int damageHit;
     public int maxHit;

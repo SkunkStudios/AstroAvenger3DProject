@@ -374,8 +374,8 @@ public class Destroyer : MonoBehaviour
             }
             else if (enemys.Length >= 1)
             {
-                nextFireLazer = Time.time + 0.05f;
-                energy -= weapon.lazers3[lazer3Upgrade].gunLazers * 0.1f;
+                nextFireLazer = Time.time + 0.01f;
+                energy -= weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                 if (lazer3Upgrade == 0)
                 {
                     if (enemys.Length >= 1)
@@ -394,7 +394,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                 }
                 else if (lazer3Upgrade == 1)
@@ -415,7 +415,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length >= 2)
                     {
@@ -437,7 +437,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                 }
                 else if (lazer3Upgrade == 2)
@@ -458,7 +458,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length == 2)
                     {
@@ -480,7 +480,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length >= 3)
                     {
@@ -506,7 +506,7 @@ public class Destroyer : MonoBehaviour
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                 }
                 else if (lazer3Upgrade == 3)
@@ -527,7 +527,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length == 2)
                     {
@@ -549,7 +549,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length == 3)
                     {
@@ -575,7 +575,7 @@ public class Destroyer : MonoBehaviour
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length >= 4)
                     {
@@ -605,7 +605,7 @@ public class Destroyer : MonoBehaviour
                         }
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                 }
                 else if (lazer3Upgrade == 4)
@@ -626,7 +626,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length == 2)
                     {
@@ -648,7 +648,7 @@ public class Destroyer : MonoBehaviour
                         weapon.discharges[2].enabled = false;
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length == 3)
                     {
@@ -674,7 +674,7 @@ public class Destroyer : MonoBehaviour
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[3].enabled = false;
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length == 4)
                     {
@@ -704,7 +704,7 @@ public class Destroyer : MonoBehaviour
                         }
                         weapon.dischargesPS[4].Stop();
                         weapon.discharges[4].enabled = false;
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                     if (enemys.Length >= 5)
                     {
@@ -738,7 +738,7 @@ public class Destroyer : MonoBehaviour
                         {
                             weapon.dischargesPS[4].Play();
                         }
-                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers;
+                        b.GetComponent<Laser>().damage = weapon.lazers3[lazer3Upgrade].gunLazers / 10;
                     }
                 }
             }

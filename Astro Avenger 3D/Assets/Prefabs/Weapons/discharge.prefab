@@ -81,6 +81,7 @@ MonoBehaviour:
   missile: {fileID: 0}
   missileSpawn: []
   damage: 100
+  damageHit: 0
   maxHit: 1
   laserObject: {fileID: 0}
   fireTail: {fileID: 0}
@@ -89,7 +90,7 @@ MonoBehaviour:
   exploreTime: 5
   playName: lazer_hit
   isBoom: 0
-  isCanHit: 1
+  isCanHit: 0
   camHit: 0
 --- !u!114 &114311241032293054
 MonoBehaviour:
